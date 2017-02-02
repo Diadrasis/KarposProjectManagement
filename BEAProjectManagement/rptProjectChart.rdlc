@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!practTitle.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!practTitle.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <ChartMembers>
+                <ChartMember>
+                  <Group Name="Chart1_CategoryGroup1">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!projTitle.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!projTitle.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <Label>=Fields!projTitle.Value</Label>
+                </ChartMember>
+              </ChartMembers>
+              <Label>=Fields!practTitle.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>pract Work Budget</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>occup Work Duration</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="practWorkBudget">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!practWorkBudget.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                    <UseValueAsLabel>true</UseValueAsLabel>
+                    <Visible>true</Visible>
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="occupWorkDuration">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!occupWorkDuration.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                    <UseValueAsLabel>true</UseValueAsLabel>
+                    <Visible>true</Visible>
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Δραστηριότητες</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Απασχόληση ΑΗ</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Default">
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+            <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+          </ChartLegend>
+        </ChartLegends>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>0.76412cm</Top>
+        <Left>0.60537cm</Left>
+        <Height>7.51354cm</Height>
+        <Width>24.59208cm</Width>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>3.48809in</Height>
+    <Style />
+  </Body>
+  <Width>10.3125in</Width>
+  <Page>
+    <PageHeader>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>biotexniko_180_b</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.2951cm</Top>
+          <Left>0.60537cm</Left>
+          <Height>1.94979cm</Height>
+          <Width>2.00271cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox2">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="ΕΦΑΡΜΟΓΗ ΔΙΑΧΕΙΡΙΣΗΣ ΕΡΓΩΝ"</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>9pt</FontSize>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>0.2951cm</Top>
+          <Left>9.44787cm</Left>
+          <Height>0.6cm</Height>
+          <Width>7.50062cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="ΜΗΝΙΑΙΑ ΑΠΑΣΧΟΛΗΣΗ "</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                    <FontSize>12pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox2</rd:DefaultName>
+          <Top>1.07149cm</Top>
+          <Left>9.1562cm</Left>
+          <Height>0.9237cm</Height>
+          <Width>8.34792cm</Width>
+          <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>1.93146cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox4">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontFamily>Century Gothic</FontFamily>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox4</rd:DefaultName>
+          <Top>0.68853cm</Top>
+          <Left>12.56453cm</Left>
+          <Height>0.6cm</Height>
+          <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageFooter>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="beaDBDataSet">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4fcad2a7-ffb8-4600-ac7c-79a75803b749</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>beaDBDataSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="projTitle">
+          <DataField>projTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="practTitle">
+          <DataField>practTitle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="practWorkBudget">
+          <DataField>practWorkBudget</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="occupWorkDuration">
+          <DataField>occupWorkDuration</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>beaDBDataSet</rd:DataSetName>
+        <rd:SchemaPath>E:\Projects\ΒΕΑ\application\BEAProjectManagement\BEAProjectManagement\beaDBDataSet.xsd</rd:SchemaPath>
+        <rd:TableName>rptProjectDesign</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>rptProjectDesignTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="biotexniko_180_b">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>0a15b16c-d085-41e4-bb9e-1cb8eaa6d4aa</rd:ReportID>
+</Report>

@@ -52,6 +52,8 @@ namespace BEAProjectManagement
             else
             {
                 rptTimeSheet2 frm2 = new rptTimeSheet2();
+                frm2.personID =(int)this.comboBox1.SelectedValue;
+                frm2.personName = this.comboBox1.Text;
                 frm2.rpDateFrom = dateFrom;
                 frm2.rpDateTo = dateTo;
                 frm2.Show();

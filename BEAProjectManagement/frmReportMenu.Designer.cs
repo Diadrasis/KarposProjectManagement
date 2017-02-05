@@ -38,6 +38,7 @@
             this.vProjectsTableAdapter = new BEAProjectManagement.beaDBDataSetTableAdapters.vProjectsTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.vProjectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             this.button2.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(472, 219);
+            this.button2.Location = new System.Drawing.Point(649, 219);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(275, 64);
             this.button2.TabIndex = 4;
@@ -87,7 +88,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(275, 21);
             this.comboBox1.TabIndex = 6;
-            this.comboBox1.ValueMember = "projTitle";
+            this.comboBox1.ValueMember = "projID";
             // 
             // vProjectsBindingSource
             // 
@@ -119,7 +120,7 @@
             // 
             this.button5.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(472, 289);
+            this.button5.Location = new System.Drawing.Point(649, 289);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(275, 64);
             this.button5.TabIndex = 8;
@@ -127,10 +128,23 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6
+            // 
+            this.button6.Image = global::BEAProjectManagement.Properties.Resources.gears;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(355, 219);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(275, 64);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Απολογισμός Έργων";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // frmReportMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1008, 530);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox1);
@@ -145,6 +159,7 @@
             this.Controls.SetChildIndex(this.comboBox1, 0);
             this.Controls.SetChildIndex(this.button4, 0);
             this.Controls.SetChildIndex(this.button5, 0);
+            this.Controls.SetChildIndex(this.button6, 0);
             ((System.ComponentModel.ISupportInitialize)(this.vProjectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -163,5 +178,6 @@
         private beaDBDataSetTableAdapters.vProjectsTableAdapter vProjectsTableAdapter;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

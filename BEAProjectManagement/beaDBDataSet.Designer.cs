@@ -88,9 +88,11 @@ namespace BEAProjectManagement {
         
         private rptProjectActivitiesDesignDataTable tablerptProjectActivitiesDesign;
         
-        private rptProjectReviewDataTable tablerptProjectReview;
-        
         private tblActivityWorkByIDDataTable tabletblActivityWorkByID;
+        
+        private rptProjectsReviewDataTable tablerptProjectsReview;
+        
+        private rptProjectReviewDataTable tablerptProjectReview;
         
         private global::System.Data.DataRelation relationFK_tblActivityTeam_tblPersons;
         
@@ -242,11 +244,14 @@ namespace BEAProjectManagement {
                 if ((ds.Tables["rptProjectActivitiesDesign"] != null)) {
                     base.Tables.Add(new rptProjectActivitiesDesignDataTable(ds.Tables["rptProjectActivitiesDesign"]));
                 }
-                if ((ds.Tables["rptProjectReview"] != null)) {
-                    base.Tables.Add(new rptProjectReviewDataTable(ds.Tables["rptProjectReview"]));
-                }
                 if ((ds.Tables["tblActivityWorkByID"] != null)) {
                     base.Tables.Add(new tblActivityWorkByIDDataTable(ds.Tables["tblActivityWorkByID"]));
+                }
+                if ((ds.Tables["rptProjectsReview"] != null)) {
+                    base.Tables.Add(new rptProjectsReviewDataTable(ds.Tables["rptProjectsReview"]));
+                }
+                if ((ds.Tables["rptProjectReview"] != null)) {
+                    base.Tables.Add(new rptProjectReviewDataTable(ds.Tables["rptProjectReview"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -590,9 +595,9 @@ namespace BEAProjectManagement {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public rptProjectReviewDataTable rptProjectReview {
+        public tblActivityWorkByIDDataTable tblActivityWorkByID {
             get {
-                return this.tablerptProjectReview;
+                return this.tabletblActivityWorkByID;
             }
         }
         
@@ -600,9 +605,19 @@ namespace BEAProjectManagement {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblActivityWorkByIDDataTable tblActivityWorkByID {
+        public rptProjectsReviewDataTable rptProjectsReview {
             get {
-                return this.tabletblActivityWorkByID;
+                return this.tablerptProjectsReview;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public rptProjectReviewDataTable rptProjectReview {
+            get {
+                return this.tablerptProjectReview;
             }
         }
         
@@ -769,11 +784,14 @@ namespace BEAProjectManagement {
                 if ((ds.Tables["rptProjectActivitiesDesign"] != null)) {
                     base.Tables.Add(new rptProjectActivitiesDesignDataTable(ds.Tables["rptProjectActivitiesDesign"]));
                 }
-                if ((ds.Tables["rptProjectReview"] != null)) {
-                    base.Tables.Add(new rptProjectReviewDataTable(ds.Tables["rptProjectReview"]));
-                }
                 if ((ds.Tables["tblActivityWorkByID"] != null)) {
                     base.Tables.Add(new tblActivityWorkByIDDataTable(ds.Tables["tblActivityWorkByID"]));
+                }
+                if ((ds.Tables["rptProjectsReview"] != null)) {
+                    base.Tables.Add(new rptProjectsReviewDataTable(ds.Tables["rptProjectsReview"]));
+                }
+                if ((ds.Tables["rptProjectReview"] != null)) {
+                    base.Tables.Add(new rptProjectReviewDataTable(ds.Tables["rptProjectReview"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -1000,16 +1018,22 @@ namespace BEAProjectManagement {
                     this.tablerptProjectActivitiesDesign.InitVars();
                 }
             }
-            this.tablerptProjectReview = ((rptProjectReviewDataTable)(base.Tables["rptProjectReview"]));
-            if ((initTable == true)) {
-                if ((this.tablerptProjectReview != null)) {
-                    this.tablerptProjectReview.InitVars();
-                }
-            }
             this.tabletblActivityWorkByID = ((tblActivityWorkByIDDataTable)(base.Tables["tblActivityWorkByID"]));
             if ((initTable == true)) {
                 if ((this.tabletblActivityWorkByID != null)) {
                     this.tabletblActivityWorkByID.InitVars();
+                }
+            }
+            this.tablerptProjectsReview = ((rptProjectsReviewDataTable)(base.Tables["rptProjectsReview"]));
+            if ((initTable == true)) {
+                if ((this.tablerptProjectsReview != null)) {
+                    this.tablerptProjectsReview.InitVars();
+                }
+            }
+            this.tablerptProjectReview = ((rptProjectReviewDataTable)(base.Tables["rptProjectReview"]));
+            if ((initTable == true)) {
+                if ((this.tablerptProjectReview != null)) {
+                    this.tablerptProjectReview.InitVars();
                 }
             }
             this.relationFK_tblActivityTeam_tblPersons = this.Relations["FK_tblActivityTeam_tblPersons"];
@@ -1099,10 +1123,12 @@ namespace BEAProjectManagement {
             base.Tables.Add(this.tablerptProjectDesign2);
             this.tablerptProjectActivitiesDesign = new rptProjectActivitiesDesignDataTable();
             base.Tables.Add(this.tablerptProjectActivitiesDesign);
-            this.tablerptProjectReview = new rptProjectReviewDataTable();
-            base.Tables.Add(this.tablerptProjectReview);
             this.tabletblActivityWorkByID = new tblActivityWorkByIDDataTable();
             base.Tables.Add(this.tabletblActivityWorkByID);
+            this.tablerptProjectsReview = new rptProjectsReviewDataTable();
+            base.Tables.Add(this.tablerptProjectsReview);
+            this.tablerptProjectReview = new rptProjectReviewDataTable();
+            base.Tables.Add(this.tablerptProjectReview);
             this.relationFK_tblActivityTeam_tblPersons = new global::System.Data.DataRelation("FK_tblActivityTeam_tblPersons", new global::System.Data.DataColumn[] {
                         this.tabletblPersons.personIDColumn}, new global::System.Data.DataColumn[] {
                         this.tabletblActivityTeam.personIDColumn}, false);
@@ -1351,13 +1377,19 @@ namespace BEAProjectManagement {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializerptProjectReview() {
+        private bool ShouldSerializetblActivityWorkByID() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetblActivityWorkByID() {
+        private bool ShouldSerializerptProjectsReview() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializerptProjectReview() {
             return false;
         }
         
@@ -1513,10 +1545,13 @@ namespace BEAProjectManagement {
         public delegate void rptProjectActivitiesDesignRowChangeEventHandler(object sender, rptProjectActivitiesDesignRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void rptProjectReviewRowChangeEventHandler(object sender, rptProjectReviewRowChangeEvent e);
+        public delegate void tblActivityWorkByIDRowChangeEventHandler(object sender, tblActivityWorkByIDRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tblActivityWorkByIDRowChangeEventHandler(object sender, tblActivityWorkByIDRowChangeEvent e);
+        public delegate void rptProjectsReviewRowChangeEventHandler(object sender, rptProjectsReviewRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void rptProjectReviewRowChangeEventHandler(object sender, rptProjectReviewRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3186,6 +3221,8 @@ namespace BEAProjectManagement {
             
             private global::System.Data.DataColumn columnprojWorkBudget;
             
+            private global::System.Data.DataColumn columnprojCode;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblProjectsDataTable() {
@@ -3293,6 +3330,14 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projCodeColumn {
+                get {
+                    return this.columnprojCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3328,7 +3373,7 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblProjectsRow AddtblProjectsRow(string projTitle, string projDesc, System.DateTime projStart, System.DateTime projFinish, bool projActive, double projBudget, double projTotalBudget, int projWorkBudget) {
+            public tblProjectsRow AddtblProjectsRow(string projTitle, string projDesc, System.DateTime projStart, System.DateTime projFinish, bool projActive, double projBudget, double projTotalBudget, int projWorkBudget, string projCode) {
                 tblProjectsRow rowtblProjectsRow = ((tblProjectsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3339,7 +3384,8 @@ namespace BEAProjectManagement {
                         projActive,
                         projBudget,
                         projTotalBudget,
-                        projWorkBudget};
+                        projWorkBudget,
+                        projCode};
                 rowtblProjectsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblProjectsRow);
                 return rowtblProjectsRow;
@@ -3378,6 +3424,7 @@ namespace BEAProjectManagement {
                 this.columnprojBudget = base.Columns["projBudget"];
                 this.columnprojTotalBudget = base.Columns["projTotalBudget"];
                 this.columnprojWorkBudget = base.Columns["projWorkBudget"];
+                this.columnprojCode = base.Columns["projCode"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3401,6 +3448,8 @@ namespace BEAProjectManagement {
                 base.Columns.Add(this.columnprojTotalBudget);
                 this.columnprojWorkBudget = new global::System.Data.DataColumn("projWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprojWorkBudget);
+                this.columnprojCode = new global::System.Data.DataColumn("projCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojCode);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnprojID}, true));
                 this.columnprojID.AutoIncrement = true;
@@ -3411,6 +3460,7 @@ namespace BEAProjectManagement {
                 this.columnprojID.Unique = true;
                 this.columnprojTitle.MaxLength = 150;
                 this.columnprojDesc.MaxLength = 150;
+                this.columnprojCode.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8021,6 +8071,8 @@ namespace BEAProjectManagement {
             
             private global::System.Data.DataColumn columnactwrkTitle;
             
+            private global::System.Data.DataColumn columnholiday;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public rptTimeSheetDataTable() {
@@ -8136,6 +8188,14 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn holidayColumn {
+                get {
+                    return this.columnholiday;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -8171,7 +8231,7 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptTimeSheetRow AddrptTimeSheetRow(string projTitle, string practCode, string practTitle, int occupWorkDuration, int personID, System.DateTime date, string personSurname, string personFirstName, string actwrkCode, string actwrkTitle) {
+            public rptTimeSheetRow AddrptTimeSheetRow(string projTitle, string practCode, string practTitle, int occupWorkDuration, int personID, System.DateTime date, string personSurname, string personFirstName, string actwrkCode, string actwrkTitle, bool holiday) {
                 rptTimeSheetRow rowrptTimeSheetRow = ((rptTimeSheetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         projTitle,
@@ -8183,7 +8243,8 @@ namespace BEAProjectManagement {
                         personSurname,
                         personFirstName,
                         actwrkCode,
-                        actwrkTitle};
+                        actwrkTitle,
+                        holiday};
                 rowrptTimeSheetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrptTimeSheetRow);
                 return rowrptTimeSheetRow;
@@ -8216,6 +8277,7 @@ namespace BEAProjectManagement {
                 this.columnpersonFirstName = base.Columns["personFirstName"];
                 this.columnactwrkCode = base.Columns["actwrkCode"];
                 this.columnactwrkTitle = base.Columns["actwrkTitle"];
+                this.columnholiday = base.Columns["holiday"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8241,6 +8303,8 @@ namespace BEAProjectManagement {
                 base.Columns.Add(this.columnactwrkCode);
                 this.columnactwrkTitle = new global::System.Data.DataColumn("actwrkTitle", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnactwrkTitle);
+                this.columnholiday = new global::System.Data.DataColumn("holiday", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnholiday);
                 this.columnprojTitle.MaxLength = 150;
                 this.columnpractCode.MaxLength = 10;
                 this.columnpractTitle.MaxLength = 150;
@@ -12029,356 +12093,6 @@ namespace BEAProjectManagement {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class rptProjectReviewDataTable : global::System.Data.TypedTableBase<rptProjectReviewRow> {
-            
-            private global::System.Data.DataColumn columnprojTitle;
-            
-            private global::System.Data.DataColumn columnpractCode;
-            
-            private global::System.Data.DataColumn columnpractTitle;
-            
-            private global::System.Data.DataColumn columnpractWorkBudget;
-            
-            private global::System.Data.DataColumn columnpersonSurname;
-            
-            private global::System.Data.DataColumn columnpersonFirstName;
-            
-            private global::System.Data.DataColumn columnactteamWorkBudget;
-            
-            private global::System.Data.DataColumn columnoccupWorkDuration;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewDataTable() {
-                this.TableName = "rptProjectReview";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal rptProjectReviewDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected rptProjectReviewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn projTitleColumn {
-                get {
-                    return this.columnprojTitle;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn practCodeColumn {
-                get {
-                    return this.columnpractCode;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn practTitleColumn {
-                get {
-                    return this.columnpractTitle;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn practWorkBudgetColumn {
-                get {
-                    return this.columnpractWorkBudget;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn personSurnameColumn {
-                get {
-                    return this.columnpersonSurname;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn personFirstNameColumn {
-                get {
-                    return this.columnpersonFirstName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn actteamWorkBudgetColumn {
-                get {
-                    return this.columnactteamWorkBudget;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn occupWorkDurationColumn {
-                get {
-                    return this.columnoccupWorkDuration;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewRow this[int index] {
-                get {
-                    return ((rptProjectReviewRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddrptProjectReviewRow(rptProjectReviewRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewRow AddrptProjectReviewRow(string projTitle, string practCode, string practTitle, int practWorkBudget, string personSurname, string personFirstName, int actteamWorkBudget, int occupWorkDuration) {
-                rptProjectReviewRow rowrptProjectReviewRow = ((rptProjectReviewRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        projTitle,
-                        practCode,
-                        practTitle,
-                        practWorkBudget,
-                        personSurname,
-                        personFirstName,
-                        actteamWorkBudget,
-                        occupWorkDuration};
-                rowrptProjectReviewRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowrptProjectReviewRow);
-                return rowrptProjectReviewRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                rptProjectReviewDataTable cln = ((rptProjectReviewDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new rptProjectReviewDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnprojTitle = base.Columns["projTitle"];
-                this.columnpractCode = base.Columns["practCode"];
-                this.columnpractTitle = base.Columns["practTitle"];
-                this.columnpractWorkBudget = base.Columns["practWorkBudget"];
-                this.columnpersonSurname = base.Columns["personSurname"];
-                this.columnpersonFirstName = base.Columns["personFirstName"];
-                this.columnactteamWorkBudget = base.Columns["actteamWorkBudget"];
-                this.columnoccupWorkDuration = base.Columns["occupWorkDuration"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnprojTitle = new global::System.Data.DataColumn("projTitle", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprojTitle);
-                this.columnpractCode = new global::System.Data.DataColumn("practCode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpractCode);
-                this.columnpractTitle = new global::System.Data.DataColumn("practTitle", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpractTitle);
-                this.columnpractWorkBudget = new global::System.Data.DataColumn("practWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpractWorkBudget);
-                this.columnpersonSurname = new global::System.Data.DataColumn("personSurname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpersonSurname);
-                this.columnpersonFirstName = new global::System.Data.DataColumn("personFirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnpersonFirstName);
-                this.columnactteamWorkBudget = new global::System.Data.DataColumn("actteamWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnactteamWorkBudget);
-                this.columnoccupWorkDuration = new global::System.Data.DataColumn("occupWorkDuration", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnoccupWorkDuration);
-                this.columnprojTitle.MaxLength = 150;
-                this.columnpractCode.MaxLength = 10;
-                this.columnpractTitle.MaxLength = 150;
-                this.columnpersonSurname.MaxLength = 150;
-                this.columnpersonFirstName.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewRow NewrptProjectReviewRow() {
-                return ((rptProjectReviewRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new rptProjectReviewRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(rptProjectReviewRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.rptProjectReviewRowChanged != null)) {
-                    this.rptProjectReviewRowChanged(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.rptProjectReviewRowChanging != null)) {
-                    this.rptProjectReviewRowChanging(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.rptProjectReviewRowDeleted != null)) {
-                    this.rptProjectReviewRowDeleted(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.rptProjectReviewRowDeleting != null)) {
-                    this.rptProjectReviewRowDeleting(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoverptProjectReviewRow(rptProjectReviewRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                beaDBDataSet ds = new beaDBDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "rptProjectReviewDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tblActivityWorkByIDDataTable : global::System.Data.TypedTableBase<tblActivityWorkByIDRow> {
             
             private global::System.Data.DataColumn columnactwrkID;
@@ -12697,6 +12411,805 @@ namespace BEAProjectManagement {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "tblActivityWorkByIDDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class rptProjectsReviewDataTable : global::System.Data.TypedTableBase<rptProjectsReviewRow> {
+            
+            private global::System.Data.DataColumn columnprojCode;
+            
+            private global::System.Data.DataColumn columnprojTitle;
+            
+            private global::System.Data.DataColumn columnpersonFirstName;
+            
+            private global::System.Data.DataColumn columnpersonSurname;
+            
+            private global::System.Data.DataColumn columnprteamWorkBudget;
+            
+            private global::System.Data.DataColumn columnoccupWorkDuration;
+            
+            private global::System.Data.DataColumn columnprteamBudget;
+            
+            private global::System.Data.DataColumn columnoccupationCost;
+            
+            private global::System.Data.DataColumn columnprojBudget;
+            
+            private global::System.Data.DataColumn columnprojWorkBudget;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectsReviewDataTable() {
+                this.TableName = "rptProjectsReview";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rptProjectsReviewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected rptProjectsReviewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projCodeColumn {
+                get {
+                    return this.columnprojCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projTitleColumn {
+                get {
+                    return this.columnprojTitle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn personFirstNameColumn {
+                get {
+                    return this.columnpersonFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn personSurnameColumn {
+                get {
+                    return this.columnpersonSurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn prteamWorkBudgetColumn {
+                get {
+                    return this.columnprteamWorkBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn occupWorkDurationColumn {
+                get {
+                    return this.columnoccupWorkDuration;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn prteamBudgetColumn {
+                get {
+                    return this.columnprteamBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn occupationCostColumn {
+                get {
+                    return this.columnoccupationCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projBudgetColumn {
+                get {
+                    return this.columnprojBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projWorkBudgetColumn {
+                get {
+                    return this.columnprojWorkBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectsReviewRow this[int index] {
+                get {
+                    return ((rptProjectsReviewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectsReviewRowChangeEventHandler rptProjectsReviewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectsReviewRowChangeEventHandler rptProjectsReviewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectsReviewRowChangeEventHandler rptProjectsReviewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectsReviewRowChangeEventHandler rptProjectsReviewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddrptProjectsReviewRow(rptProjectsReviewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectsReviewRow AddrptProjectsReviewRow(string projCode, string projTitle, string personFirstName, string personSurname, double prteamWorkBudget, int occupWorkDuration, double prteamBudget, double occupationCost, double projBudget, int projWorkBudget) {
+                rptProjectsReviewRow rowrptProjectsReviewRow = ((rptProjectsReviewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        projCode,
+                        projTitle,
+                        personFirstName,
+                        personSurname,
+                        prteamWorkBudget,
+                        occupWorkDuration,
+                        prteamBudget,
+                        occupationCost,
+                        projBudget,
+                        projWorkBudget};
+                rowrptProjectsReviewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrptProjectsReviewRow);
+                return rowrptProjectsReviewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                rptProjectsReviewDataTable cln = ((rptProjectsReviewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new rptProjectsReviewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnprojCode = base.Columns["projCode"];
+                this.columnprojTitle = base.Columns["projTitle"];
+                this.columnpersonFirstName = base.Columns["personFirstName"];
+                this.columnpersonSurname = base.Columns["personSurname"];
+                this.columnprteamWorkBudget = base.Columns["prteamWorkBudget"];
+                this.columnoccupWorkDuration = base.Columns["occupWorkDuration"];
+                this.columnprteamBudget = base.Columns["prteamBudget"];
+                this.columnoccupationCost = base.Columns["occupationCost"];
+                this.columnprojBudget = base.Columns["projBudget"];
+                this.columnprojWorkBudget = base.Columns["projWorkBudget"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnprojCode = new global::System.Data.DataColumn("projCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojCode);
+                this.columnprojTitle = new global::System.Data.DataColumn("projTitle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojTitle);
+                this.columnpersonFirstName = new global::System.Data.DataColumn("personFirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpersonFirstName);
+                this.columnpersonSurname = new global::System.Data.DataColumn("personSurname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpersonSurname);
+                this.columnprteamWorkBudget = new global::System.Data.DataColumn("prteamWorkBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprteamWorkBudget);
+                this.columnoccupWorkDuration = new global::System.Data.DataColumn("occupWorkDuration", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoccupWorkDuration);
+                this.columnprteamBudget = new global::System.Data.DataColumn("prteamBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprteamBudget);
+                this.columnoccupationCost = new global::System.Data.DataColumn("occupationCost", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoccupationCost);
+                this.columnprojBudget = new global::System.Data.DataColumn("projBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojBudget);
+                this.columnprojWorkBudget = new global::System.Data.DataColumn("projWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojWorkBudget);
+                this.columnprojCode.MaxLength = 20;
+                this.columnprojTitle.MaxLength = 150;
+                this.columnpersonFirstName.MaxLength = 50;
+                this.columnpersonSurname.MaxLength = 150;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectsReviewRow NewrptProjectsReviewRow() {
+                return ((rptProjectsReviewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new rptProjectsReviewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(rptProjectsReviewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.rptProjectsReviewRowChanged != null)) {
+                    this.rptProjectsReviewRowChanged(this, new rptProjectsReviewRowChangeEvent(((rptProjectsReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.rptProjectsReviewRowChanging != null)) {
+                    this.rptProjectsReviewRowChanging(this, new rptProjectsReviewRowChangeEvent(((rptProjectsReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.rptProjectsReviewRowDeleted != null)) {
+                    this.rptProjectsReviewRowDeleted(this, new rptProjectsReviewRowChangeEvent(((rptProjectsReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.rptProjectsReviewRowDeleting != null)) {
+                    this.rptProjectsReviewRowDeleting(this, new rptProjectsReviewRowChangeEvent(((rptProjectsReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoverptProjectsReviewRow(rptProjectsReviewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                beaDBDataSet ds = new beaDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "rptProjectsReviewDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class rptProjectReviewDataTable : global::System.Data.TypedTableBase<rptProjectReviewRow> {
+            
+            private global::System.Data.DataColumn columnprojID;
+            
+            private global::System.Data.DataColumn columnprojCode;
+            
+            private global::System.Data.DataColumn columnprojTitle;
+            
+            private global::System.Data.DataColumn columnprojBudget;
+            
+            private global::System.Data.DataColumn columnpractCode;
+            
+            private global::System.Data.DataColumn columnpractTitle;
+            
+            private global::System.Data.DataColumn columnpractWorkBudget;
+            
+            private global::System.Data.DataColumn columnpersonSurname;
+            
+            private global::System.Data.DataColumn columnpersonFirstName;
+            
+            private global::System.Data.DataColumn columnactteamWorkBudget;
+            
+            private global::System.Data.DataColumn columnactteamBudget;
+            
+            private global::System.Data.DataColumn columnoccupWorkDuration;
+            
+            private global::System.Data.DataColumn columnoccupationCost;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewDataTable() {
+                this.TableName = "rptProjectReview";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rptProjectReviewDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected rptProjectReviewDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projIDColumn {
+                get {
+                    return this.columnprojID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projCodeColumn {
+                get {
+                    return this.columnprojCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projTitleColumn {
+                get {
+                    return this.columnprojTitle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projBudgetColumn {
+                get {
+                    return this.columnprojBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn practCodeColumn {
+                get {
+                    return this.columnpractCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn practTitleColumn {
+                get {
+                    return this.columnpractTitle;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn practWorkBudgetColumn {
+                get {
+                    return this.columnpractWorkBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn personSurnameColumn {
+                get {
+                    return this.columnpersonSurname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn personFirstNameColumn {
+                get {
+                    return this.columnpersonFirstName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn actteamWorkBudgetColumn {
+                get {
+                    return this.columnactteamWorkBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn actteamBudgetColumn {
+                get {
+                    return this.columnactteamBudget;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn occupWorkDurationColumn {
+                get {
+                    return this.columnoccupWorkDuration;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn occupationCostColumn {
+                get {
+                    return this.columnoccupationCost;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewRow this[int index] {
+                get {
+                    return ((rptProjectReviewRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event rptProjectReviewRowChangeEventHandler rptProjectReviewRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddrptProjectReviewRow(rptProjectReviewRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewRow AddrptProjectReviewRow(int projID, string projCode, string projTitle, double projBudget, string practCode, string practTitle, int practWorkBudget, string personSurname, string personFirstName, double actteamWorkBudget, double actteamBudget, int occupWorkDuration, double occupationCost) {
+                rptProjectReviewRow rowrptProjectReviewRow = ((rptProjectReviewRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        projID,
+                        projCode,
+                        projTitle,
+                        projBudget,
+                        practCode,
+                        practTitle,
+                        practWorkBudget,
+                        personSurname,
+                        personFirstName,
+                        actteamWorkBudget,
+                        actteamBudget,
+                        occupWorkDuration,
+                        occupationCost};
+                rowrptProjectReviewRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowrptProjectReviewRow);
+                return rowrptProjectReviewRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                rptProjectReviewDataTable cln = ((rptProjectReviewDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new rptProjectReviewDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnprojID = base.Columns["projID"];
+                this.columnprojCode = base.Columns["projCode"];
+                this.columnprojTitle = base.Columns["projTitle"];
+                this.columnprojBudget = base.Columns["projBudget"];
+                this.columnpractCode = base.Columns["practCode"];
+                this.columnpractTitle = base.Columns["practTitle"];
+                this.columnpractWorkBudget = base.Columns["practWorkBudget"];
+                this.columnpersonSurname = base.Columns["personSurname"];
+                this.columnpersonFirstName = base.Columns["personFirstName"];
+                this.columnactteamWorkBudget = base.Columns["actteamWorkBudget"];
+                this.columnactteamBudget = base.Columns["actteamBudget"];
+                this.columnoccupWorkDuration = base.Columns["occupWorkDuration"];
+                this.columnoccupationCost = base.Columns["occupationCost"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnprojID = new global::System.Data.DataColumn("projID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojID);
+                this.columnprojCode = new global::System.Data.DataColumn("projCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojCode);
+                this.columnprojTitle = new global::System.Data.DataColumn("projTitle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojTitle);
+                this.columnprojBudget = new global::System.Data.DataColumn("projBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojBudget);
+                this.columnpractCode = new global::System.Data.DataColumn("practCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpractCode);
+                this.columnpractTitle = new global::System.Data.DataColumn("practTitle", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpractTitle);
+                this.columnpractWorkBudget = new global::System.Data.DataColumn("practWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpractWorkBudget);
+                this.columnpersonSurname = new global::System.Data.DataColumn("personSurname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpersonSurname);
+                this.columnpersonFirstName = new global::System.Data.DataColumn("personFirstName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpersonFirstName);
+                this.columnactteamWorkBudget = new global::System.Data.DataColumn("actteamWorkBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactteamWorkBudget);
+                this.columnactteamBudget = new global::System.Data.DataColumn("actteamBudget", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnactteamBudget);
+                this.columnoccupWorkDuration = new global::System.Data.DataColumn("occupWorkDuration", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoccupWorkDuration);
+                this.columnoccupationCost = new global::System.Data.DataColumn("occupationCost", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnoccupationCost);
+                this.columnprojID.AllowDBNull = false;
+                this.columnprojCode.MaxLength = 20;
+                this.columnprojTitle.MaxLength = 150;
+                this.columnpractCode.MaxLength = 10;
+                this.columnpractTitle.MaxLength = 150;
+                this.columnpersonSurname.MaxLength = 150;
+                this.columnpersonFirstName.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewRow NewrptProjectReviewRow() {
+                return ((rptProjectReviewRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new rptProjectReviewRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(rptProjectReviewRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.rptProjectReviewRowChanged != null)) {
+                    this.rptProjectReviewRowChanged(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.rptProjectReviewRowChanging != null)) {
+                    this.rptProjectReviewRowChanging(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.rptProjectReviewRowDeleted != null)) {
+                    this.rptProjectReviewRowDeleted(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.rptProjectReviewRowDeleting != null)) {
+                    this.rptProjectReviewRowDeleting(this, new rptProjectReviewRowChangeEvent(((rptProjectReviewRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoverptProjectReviewRow(rptProjectReviewRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                beaDBDataSet ds = new beaDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "rptProjectReviewDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -13793,6 +14306,22 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string projCode {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblProjects.projCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projCode\' in table \'tblProjects\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblProjects.projCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsprojTitleNull() {
                 return this.IsNull(this.tabletblProjects.projTitleColumn);
             }
@@ -13885,6 +14414,18 @@ namespace BEAProjectManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetprojWorkBudgetNull() {
                 this[this.tabletblProjects.projWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojCodeNull() {
+                return this.IsNull(this.tabletblProjects.projCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojCodeNull() {
+                this[this.tabletblProjects.projCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16052,6 +16593,22 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool holiday {
+                get {
+                    try {
+                        return ((bool)(this[this.tablerptTimeSheet.holidayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'holiday\' in table \'rptTimeSheet\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptTimeSheet.holidayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsprojTitleNull() {
                 return this.IsNull(this.tablerptTimeSheet.projTitleColumn);
             }
@@ -16156,6 +16713,18 @@ namespace BEAProjectManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetactwrkTitleNull() {
                 this[this.tablerptTimeSheet.actwrkTitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsholidayNull() {
+                return this.IsNull(this.tablerptTimeSheet.holidayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetholidayNull() {
+                this[this.tablerptTimeSheet.holidayColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -18125,245 +18694,6 @@ namespace BEAProjectManagement {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class rptProjectReviewRow : global::System.Data.DataRow {
-            
-            private rptProjectReviewDataTable tablerptProjectReview;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal rptProjectReviewRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablerptProjectReview = ((rptProjectReviewDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string projTitle {
-                get {
-                    try {
-                        return ((string)(this[this.tablerptProjectReview.projTitleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'projTitle\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.projTitleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string practCode {
-                get {
-                    try {
-                        return ((string)(this[this.tablerptProjectReview.practCodeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'practCode\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.practCodeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string practTitle {
-                get {
-                    try {
-                        return ((string)(this[this.tablerptProjectReview.practTitleColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'practTitle\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.practTitleColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int practWorkBudget {
-                get {
-                    try {
-                        return ((int)(this[this.tablerptProjectReview.practWorkBudgetColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'practWorkBudget\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.practWorkBudgetColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string personSurname {
-                get {
-                    try {
-                        return ((string)(this[this.tablerptProjectReview.personSurnameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'personSurname\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.personSurnameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string personFirstName {
-                get {
-                    try {
-                        return ((string)(this[this.tablerptProjectReview.personFirstNameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'personFirstName\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.personFirstNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int actteamWorkBudget {
-                get {
-                    try {
-                        return ((int)(this[this.tablerptProjectReview.actteamWorkBudgetColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'actteamWorkBudget\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.actteamWorkBudgetColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int occupWorkDuration {
-                get {
-                    try {
-                        return ((int)(this[this.tablerptProjectReview.occupWorkDurationColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'occupWorkDuration\' in table \'rptProjectReview\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablerptProjectReview.occupWorkDurationColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsprojTitleNull() {
-                return this.IsNull(this.tablerptProjectReview.projTitleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetprojTitleNull() {
-                this[this.tablerptProjectReview.projTitleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspractCodeNull() {
-                return this.IsNull(this.tablerptProjectReview.practCodeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpractCodeNull() {
-                this[this.tablerptProjectReview.practCodeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspractTitleNull() {
-                return this.IsNull(this.tablerptProjectReview.practTitleColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpractTitleNull() {
-                this[this.tablerptProjectReview.practTitleColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspractWorkBudgetNull() {
-                return this.IsNull(this.tablerptProjectReview.practWorkBudgetColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpractWorkBudgetNull() {
-                this[this.tablerptProjectReview.practWorkBudgetColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspersonSurnameNull() {
-                return this.IsNull(this.tablerptProjectReview.personSurnameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpersonSurnameNull() {
-                this[this.tablerptProjectReview.personSurnameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IspersonFirstNameNull() {
-                return this.IsNull(this.tablerptProjectReview.personFirstNameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetpersonFirstNameNull() {
-                this[this.tablerptProjectReview.personFirstNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsactteamWorkBudgetNull() {
-                return this.IsNull(this.tablerptProjectReview.actteamWorkBudgetColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetactteamWorkBudgetNull() {
-                this[this.tablerptProjectReview.actteamWorkBudgetColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsoccupWorkDurationNull() {
-                return this.IsNull(this.tablerptProjectReview.occupWorkDurationColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetoccupWorkDurationNull() {
-                this[this.tablerptProjectReview.occupWorkDurationColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class tblActivityWorkByIDRow : global::System.Data.DataRow {
             
             private tblActivityWorkByIDDataTable tabletblActivityWorkByID;
@@ -18581,6 +18911,663 @@ namespace BEAProjectManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetactwrkWorkBudgetNull() {
                 this[this.tabletblActivityWorkByID.actwrkWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class rptProjectsReviewRow : global::System.Data.DataRow {
+            
+            private rptProjectsReviewDataTable tablerptProjectsReview;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rptProjectsReviewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablerptProjectsReview = ((rptProjectsReviewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string projCode {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectsReview.projCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projCode\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string projTitle {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectsReview.projTitleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projTitle\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projTitleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string personFirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectsReview.personFirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'personFirstName\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.personFirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string personSurname {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectsReview.personSurnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'personSurname\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.personSurnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double prteamWorkBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectsReview.prteamWorkBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'prteamWorkBudget\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.prteamWorkBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int occupWorkDuration {
+                get {
+                    try {
+                        return ((int)(this[this.tablerptProjectsReview.occupWorkDurationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'occupWorkDuration\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.occupWorkDurationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double prteamBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectsReview.prteamBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'prteamBudget\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.prteamBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double occupationCost {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectsReview.occupationCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'occupationCost\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.occupationCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double projBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectsReview.projBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projBudget\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int projWorkBudget {
+                get {
+                    try {
+                        return ((int)(this[this.tablerptProjectsReview.projWorkBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projWorkBudget\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projWorkBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojCodeNull() {
+                return this.IsNull(this.tablerptProjectsReview.projCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojCodeNull() {
+                this[this.tablerptProjectsReview.projCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojTitleNull() {
+                return this.IsNull(this.tablerptProjectsReview.projTitleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojTitleNull() {
+                this[this.tablerptProjectsReview.projTitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspersonFirstNameNull() {
+                return this.IsNull(this.tablerptProjectsReview.personFirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpersonFirstNameNull() {
+                this[this.tablerptProjectsReview.personFirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspersonSurnameNull() {
+                return this.IsNull(this.tablerptProjectsReview.personSurnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpersonSurnameNull() {
+                this[this.tablerptProjectsReview.personSurnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprteamWorkBudgetNull() {
+                return this.IsNull(this.tablerptProjectsReview.prteamWorkBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprteamWorkBudgetNull() {
+                this[this.tablerptProjectsReview.prteamWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsoccupWorkDurationNull() {
+                return this.IsNull(this.tablerptProjectsReview.occupWorkDurationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetoccupWorkDurationNull() {
+                this[this.tablerptProjectsReview.occupWorkDurationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprteamBudgetNull() {
+                return this.IsNull(this.tablerptProjectsReview.prteamBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprteamBudgetNull() {
+                this[this.tablerptProjectsReview.prteamBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsoccupationCostNull() {
+                return this.IsNull(this.tablerptProjectsReview.occupationCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetoccupationCostNull() {
+                this[this.tablerptProjectsReview.occupationCostColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojBudgetNull() {
+                return this.IsNull(this.tablerptProjectsReview.projBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojBudgetNull() {
+                this[this.tablerptProjectsReview.projBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojWorkBudgetNull() {
+                return this.IsNull(this.tablerptProjectsReview.projWorkBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojWorkBudgetNull() {
+                this[this.tablerptProjectsReview.projWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class rptProjectReviewRow : global::System.Data.DataRow {
+            
+            private rptProjectReviewDataTable tablerptProjectReview;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal rptProjectReviewRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablerptProjectReview = ((rptProjectReviewDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int projID {
+                get {
+                    return ((int)(this[this.tablerptProjectReview.projIDColumn]));
+                }
+                set {
+                    this[this.tablerptProjectReview.projIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string projCode {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.projCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projCode\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.projCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string projTitle {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.projTitleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projTitle\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.projTitleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double projBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectReview.projBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projBudget\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.projBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string practCode {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.practCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'practCode\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.practCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string practTitle {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.practTitleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'practTitle\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.practTitleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int practWorkBudget {
+                get {
+                    try {
+                        return ((int)(this[this.tablerptProjectReview.practWorkBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'practWorkBudget\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.practWorkBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string personSurname {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.personSurnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'personSurname\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.personSurnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string personFirstName {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectReview.personFirstNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'personFirstName\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.personFirstNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double actteamWorkBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectReview.actteamWorkBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'actteamWorkBudget\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.actteamWorkBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double actteamBudget {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectReview.actteamBudgetColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'actteamBudget\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.actteamBudgetColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int occupWorkDuration {
+                get {
+                    try {
+                        return ((int)(this[this.tablerptProjectReview.occupWorkDurationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'occupWorkDuration\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.occupWorkDurationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double occupationCost {
+                get {
+                    try {
+                        return ((double)(this[this.tablerptProjectReview.occupationCostColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'occupationCost\' in table \'rptProjectReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectReview.occupationCostColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojCodeNull() {
+                return this.IsNull(this.tablerptProjectReview.projCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojCodeNull() {
+                this[this.tablerptProjectReview.projCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojTitleNull() {
+                return this.IsNull(this.tablerptProjectReview.projTitleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojTitleNull() {
+                this[this.tablerptProjectReview.projTitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojBudgetNull() {
+                return this.IsNull(this.tablerptProjectReview.projBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojBudgetNull() {
+                this[this.tablerptProjectReview.projBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspractCodeNull() {
+                return this.IsNull(this.tablerptProjectReview.practCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpractCodeNull() {
+                this[this.tablerptProjectReview.practCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspractTitleNull() {
+                return this.IsNull(this.tablerptProjectReview.practTitleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpractTitleNull() {
+                this[this.tablerptProjectReview.practTitleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspractWorkBudgetNull() {
+                return this.IsNull(this.tablerptProjectReview.practWorkBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpractWorkBudgetNull() {
+                this[this.tablerptProjectReview.practWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspersonSurnameNull() {
+                return this.IsNull(this.tablerptProjectReview.personSurnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpersonSurnameNull() {
+                this[this.tablerptProjectReview.personSurnameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspersonFirstNameNull() {
+                return this.IsNull(this.tablerptProjectReview.personFirstNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpersonFirstNameNull() {
+                this[this.tablerptProjectReview.personFirstNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsactteamWorkBudgetNull() {
+                return this.IsNull(this.tablerptProjectReview.actteamWorkBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetactteamWorkBudgetNull() {
+                this[this.tablerptProjectReview.actteamWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsactteamBudgetNull() {
+                return this.IsNull(this.tablerptProjectReview.actteamBudgetColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetactteamBudgetNull() {
+                this[this.tablerptProjectReview.actteamBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsoccupWorkDurationNull() {
+                return this.IsNull(this.tablerptProjectReview.occupWorkDurationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetoccupWorkDurationNull() {
+                this[this.tablerptProjectReview.occupWorkDurationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsoccupationCostNull() {
+                return this.IsNull(this.tablerptProjectReview.occupationCostColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetoccupationCostNull() {
+                this[this.tablerptProjectReview.occupationCostColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -19676,22 +20663,22 @@ namespace BEAProjectManagement {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class rptProjectReviewRowChangeEvent : global::System.EventArgs {
+        public class tblActivityWorkByIDRowChangeEvent : global::System.EventArgs {
             
-            private rptProjectReviewRow eventRow;
+            private tblActivityWorkByIDRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewRowChangeEvent(rptProjectReviewRow row, global::System.Data.DataRowAction action) {
+            public tblActivityWorkByIDRowChangeEvent(tblActivityWorkByIDRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectReviewRow Row {
+            public tblActivityWorkByIDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -19710,22 +20697,56 @@ namespace BEAProjectManagement {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tblActivityWorkByIDRowChangeEvent : global::System.EventArgs {
+        public class rptProjectsReviewRowChangeEvent : global::System.EventArgs {
             
-            private tblActivityWorkByIDRow eventRow;
+            private rptProjectsReviewRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblActivityWorkByIDRowChangeEvent(tblActivityWorkByIDRow row, global::System.Data.DataRowAction action) {
+            public rptProjectsReviewRowChangeEvent(rptProjectsReviewRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblActivityWorkByIDRow Row {
+            public rptProjectsReviewRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class rptProjectReviewRowChangeEvent : global::System.EventArgs {
+            
+            private rptProjectReviewRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewRowChangeEvent(rptProjectReviewRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public rptProjectReviewRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -22147,10 +23168,11 @@ SELECT practID, projID, practTitle, practDesc, practStart, practFinish, practWor
             tableMapping.ColumnMappings.Add("projBudget", "projBudget");
             tableMapping.ColumnMappings.Add("projTotalBudget", "projTotalBudget");
             tableMapping.ColumnMappings.Add("projWorkBudget", "projWorkBudget");
+            tableMapping.ColumnMappings.Add("projCode", "projCode");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tblProjects] WHERE (([projID] = @Original_projID) AND ((@IsNull_projTitle = 1 AND [projTitle] IS NULL) OR ([projTitle] = @Original_projTitle)) AND ((@IsNull_projDesc = 1 AND [projDesc] IS NULL) OR ([projDesc] = @Original_projDesc)) AND ((@IsNull_projStart = 1 AND [projStart] IS NULL) OR ([projStart] = @Original_projStart)) AND ((@IsNull_projFinish = 1 AND [projFinish] IS NULL) OR ([projFinish] = @Original_projFinish)) AND ((@IsNull_projActive = 1 AND [projActive] IS NULL) OR ([projActive] = @Original_projActive)) AND ((@IsNull_projBudget = 1 AND [projBudget] IS NULL) OR ([projBudget] = @Original_projBudget)) AND ((@IsNull_projTotalBudget = 1 AND [projTotalBudget] IS NULL) OR ([projTotalBudget] = @Original_projTotalBudget)) AND ((@IsNull_projWorkBudget = 1 AND [projWorkBudget] IS NULL) OR ([projWorkBudget] = @Original_projWorkBudget)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [tblProjects] WHERE (([projID] = @Original_projID) AND ((@IsNull_projTitle = 1 AND [projTitle] IS NULL) OR ([projTitle] = @Original_projTitle)) AND ((@IsNull_projDesc = 1 AND [projDesc] IS NULL) OR ([projDesc] = @Original_projDesc)) AND ((@IsNull_projStart = 1 AND [projStart] IS NULL) OR ([projStart] = @Original_projStart)) AND ((@IsNull_projFinish = 1 AND [projFinish] IS NULL) OR ([projFinish] = @Original_projFinish)) AND ((@IsNull_projActive = 1 AND [projActive] IS NULL) OR ([projActive] = @Original_projActive)) AND ((@IsNull_projBudget = 1 AND [projBudget] IS NULL) OR ([projBudget] = @Original_projBudget)) AND ((@IsNull_projTotalBudget = 1 AND [projTotalBudget] IS NULL) OR ([projTotalBudget] = @Original_projTotalBudget)) AND ((@IsNull_projWorkBudget = 1 AND [projWorkBudget] IS NULL) OR ([projWorkBudget] = @Original_projWorkBudget)) AND ((@IsNull_projCode = 1 AND [projCode] IS NULL) OR ([projCode] = @Original_projCode)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projTitle", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -22169,10 +23191,12 @@ SELECT practID, projID, practTitle, practDesc, practStart, practFinish, practWor
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projTotalBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTotalBudget", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tblProjects] ([projTitle], [projDesc], [projStart], [projFinish], [projActive], [projBudget], [projTotalBudget], [projWorkBudget]) VALUES (@projTitle, @projDesc, @projStart, @projFinish, @projActive, @projBudget, @projTotalBudget, @projWorkBudget);
-SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget FROM tblProjects WHERE (projID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tblProjects] ([projTitle], [projDesc], [projStart], [projFinish], [projActive], [projBudget], [projTotalBudget], [projWorkBudget], [projCode]) VALUES (@projTitle, @projDesc, @projStart, @projFinish, @projActive, @projBudget, @projTotalBudget, @projWorkBudget, @projCode);
+SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget, projCode FROM tblProjects WHERE (projID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projDesc", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projDesc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -22182,10 +23206,11 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projTotalBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTotalBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [tblProjects] SET [projTitle] = @projTitle, [projDesc] = @projDesc, [projStart] = @projStart, [projFinish] = @projFinish, [projActive] = @projActive, [projBudget] = @projBudget, [projTotalBudget] = @projTotalBudget, [projWorkBudget] = @projWorkBudget WHERE (([projID] = @Original_projID) AND ((@IsNull_projTitle = 1 AND [projTitle] IS NULL) OR ([projTitle] = @Original_projTitle)) AND ((@IsNull_projDesc = 1 AND [projDesc] IS NULL) OR ([projDesc] = @Original_projDesc)) AND ((@IsNull_projStart = 1 AND [projStart] IS NULL) OR ([projStart] = @Original_projStart)) AND ((@IsNull_projFinish = 1 AND [projFinish] IS NULL) OR ([projFinish] = @Original_projFinish)) AND ((@IsNull_projActive = 1 AND [projActive] IS NULL) OR ([projActive] = @Original_projActive)) AND ((@IsNull_projBudget = 1 AND [projBudget] IS NULL) OR ([projBudget] = @Original_projBudget)) AND ((@IsNull_projTotalBudget = 1 AND [projTotalBudget] IS NULL) OR ([projTotalBudget] = @Original_projTotalBudget)) AND ((@IsNull_projWorkBudget = 1 AND [projWorkBudget] IS NULL) OR ([projWorkBudget] = @Original_projWorkBudget)));
-SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget FROM tblProjects WHERE (projID = @projID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [tblProjects] SET [projTitle] = @projTitle, [projDesc] = @projDesc, [projStart] = @projStart, [projFinish] = @projFinish, [projActive] = @projActive, [projBudget] = @projBudget, [projTotalBudget] = @projTotalBudget, [projWorkBudget] = @projWorkBudget, [projCode] = @projCode WHERE (([projID] = @Original_projID) AND ((@IsNull_projTitle = 1 AND [projTitle] IS NULL) OR ([projTitle] = @Original_projTitle)) AND ((@IsNull_projDesc = 1 AND [projDesc] IS NULL) OR ([projDesc] = @Original_projDesc)) AND ((@IsNull_projStart = 1 AND [projStart] IS NULL) OR ([projStart] = @Original_projStart)) AND ((@IsNull_projFinish = 1 AND [projFinish] IS NULL) OR ([projFinish] = @Original_projFinish)) AND ((@IsNull_projActive = 1 AND [projActive] IS NULL) OR ([projActive] = @Original_projActive)) AND ((@IsNull_projBudget = 1 AND [projBudget] IS NULL) OR ([projBudget] = @Original_projBudget)) AND ((@IsNull_projTotalBudget = 1 AND [projTotalBudget] IS NULL) OR ([projTotalBudget] = @Original_projTotalBudget)) AND ((@IsNull_projWorkBudget = 1 AND [projWorkBudget] IS NULL) OR ([projWorkBudget] = @Original_projWorkBudget)) AND ((@IsNull_projCode = 1 AND [projCode] IS NULL) OR ([projCode] = @Original_projCode)));
+SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget, projCode FROM tblProjects WHERE (projID = @projID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projDesc", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projDesc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -22195,6 +23220,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projTotalBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTotalBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projTitle", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projTitle", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -22212,6 +23238,8 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projTotalBudget", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projTotalBudget", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projWorkBudget", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projWorkBudget", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_projCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_projCode", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "projCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "projID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -22229,7 +23257,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        projID, projTitle, projDesc, projStart, projFinish, projActive, pro" +
-                "jBudget, projTotalBudget, projWorkBudget\r\nFROM            tblProjects";
+                "jBudget, projTotalBudget, projWorkBudget, projCode\r\nFROM            tblProjects";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -22290,7 +23318,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_projID, string Original_projTitle, string Original_projDesc, global::System.Nullable<global::System.DateTime> Original_projStart, global::System.Nullable<global::System.DateTime> Original_projFinish, global::System.Nullable<bool> Original_projActive, global::System.Nullable<double> Original_projBudget, global::System.Nullable<double> Original_projTotalBudget, global::System.Nullable<int> Original_projWorkBudget) {
+        public virtual int Delete(int Original_projID, string Original_projTitle, string Original_projDesc, global::System.Nullable<global::System.DateTime> Original_projStart, global::System.Nullable<global::System.DateTime> Original_projFinish, global::System.Nullable<bool> Original_projActive, global::System.Nullable<double> Original_projBudget, global::System.Nullable<double> Original_projTotalBudget, global::System.Nullable<int> Original_projWorkBudget, string Original_projCode) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_projID));
             if ((Original_projTitle == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -22356,6 +23384,14 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
+            if ((Original_projCode == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_projCode));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -22376,7 +23412,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string projTitle, string projDesc, global::System.Nullable<global::System.DateTime> projStart, global::System.Nullable<global::System.DateTime> projFinish, global::System.Nullable<bool> projActive, global::System.Nullable<double> projBudget, global::System.Nullable<double> projTotalBudget, global::System.Nullable<int> projWorkBudget) {
+        public virtual int Insert(string projTitle, string projDesc, global::System.Nullable<global::System.DateTime> projStart, global::System.Nullable<global::System.DateTime> projFinish, global::System.Nullable<bool> projActive, global::System.Nullable<double> projBudget, global::System.Nullable<double> projTotalBudget, global::System.Nullable<int> projWorkBudget, string projCode) {
             if ((projTitle == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -22425,6 +23461,12 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
+            if ((projCode == null)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(projCode));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -22454,6 +23496,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
                     global::System.Nullable<double> projBudget, 
                     global::System.Nullable<double> projTotalBudget, 
                     global::System.Nullable<int> projWorkBudget, 
+                    string projCode, 
                     int Original_projID, 
                     string Original_projTitle, 
                     string Original_projDesc, 
@@ -22463,6 +23506,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
                     global::System.Nullable<double> Original_projBudget, 
                     global::System.Nullable<double> Original_projTotalBudget, 
                     global::System.Nullable<int> Original_projWorkBudget, 
+                    string Original_projCode, 
                     int projID) {
             if ((projTitle == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -22512,72 +23556,86 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_projID));
-            if ((Original_projTitle == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            if ((projCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_projTitle));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(projCode));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_projID));
+            if ((Original_projTitle == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_projTitle));
             }
             if ((Original_projDesc == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_projDesc));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_projDesc));
             }
             if ((Original_projStart.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_projStart.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_projStart.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_projFinish.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_projFinish.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_projFinish.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             if ((Original_projActive.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_projActive.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_projActive.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_projBudget.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((double)(Original_projBudget.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((double)(Original_projBudget.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_projTotalBudget.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((double)(Original_projTotalBudget.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((double)(Original_projTotalBudget.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((Original_projWorkBudget.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_projWorkBudget.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_projWorkBudget.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(projID));
+            if ((Original_projCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_projCode));
+            }
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(projID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -22607,6 +23665,7 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
                     global::System.Nullable<double> projBudget, 
                     global::System.Nullable<double> projTotalBudget, 
                     global::System.Nullable<int> projWorkBudget, 
+                    string projCode, 
                     int Original_projID, 
                     string Original_projTitle, 
                     string Original_projDesc, 
@@ -22615,8 +23674,9 @@ SELECT projID, projTitle, projDesc, projStart, projFinish, projActive, projBudge
                     global::System.Nullable<bool> Original_projActive, 
                     global::System.Nullable<double> Original_projBudget, 
                     global::System.Nullable<double> Original_projTotalBudget, 
-                    global::System.Nullable<int> Original_projWorkBudget) {
-            return this.Update(projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget, Original_projID, Original_projTitle, Original_projDesc, Original_projStart, Original_projFinish, Original_projActive, Original_projBudget, Original_projTotalBudget, Original_projWorkBudget, Original_projID);
+                    global::System.Nullable<int> Original_projWorkBudget, 
+                    string Original_projCode) {
+            return this.Update(projTitle, projDesc, projStart, projFinish, projActive, projBudget, projTotalBudget, projWorkBudget, projCode, Original_projID, Original_projTitle, Original_projDesc, Original_projStart, Original_projFinish, Original_projActive, Original_projBudget, Original_projTotalBudget, Original_projWorkBudget, Original_projCode, Original_projID);
         }
     }
     
@@ -27698,6 +28758,7 @@ SELECT wrkactID, actwrkID, wrkactCode, wrkactTitle, wrkactDesc FROM tblWorkActio
             tableMapping.ColumnMappings.Add("personFirstName", "personFirstName");
             tableMapping.ColumnMappings.Add("actwrkCode", "actwrkCode");
             tableMapping.ColumnMappings.Add("actwrkTitle", "actwrkTitle");
+            tableMapping.ColumnMappings.Add("holiday", "holiday");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -27714,7 +28775,7 @@ SELECT wrkactID, actwrkID, wrkactCode, wrkactTitle, wrkactDesc FROM tblWorkActio
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        date, personID, personSurname, personFirstName, projTitle, practCode, practTitle, occupWorkDuration, actwrkCode, actwrkTitle
+            this._commandCollection[0].CommandText = @"SELECT        date, holiday, personID, personSurname, personFirstName, projTitle, practCode, practTitle, occupWorkDuration, actwrkCode, actwrkTitle
 FROM            rptTimeSheet
 WHERE        (date >= @dateFrom) AND (date <= @dateTo)
 ORDER BY date, personID, projTitle, practCode, actwrkCode";
@@ -30811,195 +31872,6 @@ WHERE        (projTitle = @projTitle)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class rptProjectReviewTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public rptProjectReviewTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "rptProjectReview";
-            tableMapping.ColumnMappings.Add("projTitle", "projTitle");
-            tableMapping.ColumnMappings.Add("practCode", "practCode");
-            tableMapping.ColumnMappings.Add("practTitle", "practTitle");
-            tableMapping.ColumnMappings.Add("practWorkBudget", "practWorkBudget");
-            tableMapping.ColumnMappings.Add("personSurname", "personSurname");
-            tableMapping.ColumnMappings.Add("personFirstName", "personFirstName");
-            tableMapping.ColumnMappings.Add("actteamWorkBudget", "actteamWorkBudget");
-            tableMapping.ColumnMappings.Add("occupWorkDuration", "occupWorkDuration");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::BEAProjectManagement.Properties.Settings.Default.beaDBConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        projTitle, practCode, practTitle, practWorkBudget, personSurname, p" +
-                "ersonFirstName, actteamWorkBudget, occupWorkDuration\r\nFROM            rptProject" +
-                "Review\r\nWHERE        (projTitle = @projTitle)";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projTitle", global::System.Data.SqlDbType.NVarChar, 150, global::System.Data.ParameterDirection.Input, 0, 0, "projTitle", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(beaDBDataSet.rptProjectReviewDataTable dataTable, string projTitle) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((projTitle == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(projTitle));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual beaDBDataSet.rptProjectReviewDataTable GetData(string projTitle) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((projTitle == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(projTitle));
-            }
-            beaDBDataSet.rptProjectReviewDataTable dataTable = new beaDBDataSet.rptProjectReviewDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class tblActivityWorkByIDTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -31505,6 +32377,368 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> practID, string actwrkCode, string actwrkTitle, string actwrkDesc, global::System.Nullable<global::System.DateTime> actwrkStart, global::System.Nullable<global::System.DateTime> actwrkFinish, global::System.Nullable<int> actwrkWorkBudget, int Original_actwrkID, global::System.Nullable<int> Original_practID, string Original_actwrkCode, string Original_actwrkTitle, global::System.Nullable<global::System.DateTime> Original_actwrkStart, global::System.Nullable<global::System.DateTime> Original_actwrkFinish, global::System.Nullable<int> Original_actwrkWorkBudget) {
             return this.Update(practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actwrkFinish, actwrkWorkBudget, Original_actwrkID, Original_practID, Original_actwrkCode, Original_actwrkTitle, Original_actwrkStart, Original_actwrkFinish, Original_actwrkWorkBudget, Original_actwrkID);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class rptProjectsReviewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public rptProjectsReviewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "rptProjectsReview";
+            tableMapping.ColumnMappings.Add("projCode", "projCode");
+            tableMapping.ColumnMappings.Add("projTitle", "projTitle");
+            tableMapping.ColumnMappings.Add("personFirstName", "personFirstName");
+            tableMapping.ColumnMappings.Add("personSurname", "personSurname");
+            tableMapping.ColumnMappings.Add("prteamWorkBudget", "prteamWorkBudget");
+            tableMapping.ColumnMappings.Add("occupWorkDuration", "occupWorkDuration");
+            tableMapping.ColumnMappings.Add("prteamBudget", "prteamBudget");
+            tableMapping.ColumnMappings.Add("occupationCost", "occupationCost");
+            tableMapping.ColumnMappings.Add("projBudget", "projBudget");
+            tableMapping.ColumnMappings.Add("projWorkBudget", "projWorkBudget");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::BEAProjectManagement.Properties.Settings.Default.beaDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        projCode, projTitle, personFirstName, personSurname, occupWorkDurat" +
+                "ion, prteamBudget, occupationCost, projBudget, prteamWorkBudget, projWorkBudget\r" +
+                "\nFROM            rptProjectsReview";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(beaDBDataSet.rptProjectsReviewDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual beaDBDataSet.rptProjectsReviewDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            beaDBDataSet.rptProjectsReviewDataTable dataTable = new beaDBDataSet.rptProjectsReviewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class rptProjectReviewTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public rptProjectReviewTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "rptProjectReview";
+            tableMapping.ColumnMappings.Add("projID", "projID");
+            tableMapping.ColumnMappings.Add("projCode", "projCode");
+            tableMapping.ColumnMappings.Add("projTitle", "projTitle");
+            tableMapping.ColumnMappings.Add("projBudget", "projBudget");
+            tableMapping.ColumnMappings.Add("practCode", "practCode");
+            tableMapping.ColumnMappings.Add("practTitle", "practTitle");
+            tableMapping.ColumnMappings.Add("practWorkBudget", "practWorkBudget");
+            tableMapping.ColumnMappings.Add("personSurname", "personSurname");
+            tableMapping.ColumnMappings.Add("personFirstName", "personFirstName");
+            tableMapping.ColumnMappings.Add("actteamWorkBudget", "actteamWorkBudget");
+            tableMapping.ColumnMappings.Add("actteamBudget", "actteamBudget");
+            tableMapping.ColumnMappings.Add("occupWorkDuration", "occupWorkDuration");
+            tableMapping.ColumnMappings.Add("occupationCost", "occupationCost");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::BEAProjectManagement.Properties.Settings.Default.beaDBConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        projID, projCode, projTitle, projBudget, practCode, practTitle, practWorkBudget, personSurname, personFirstName, actteamWorkBudget, actteamBudget, occupWorkDuration, occupationCost
+FROM            rptProjectReview
+WHERE        (projID = @projID)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@projID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "projID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(beaDBDataSet.rptProjectReviewDataTable dataTable, int projID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(projID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual beaDBDataSet.rptProjectReviewDataTable GetData(int projID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(projID));
+            beaDBDataSet.rptProjectReviewDataTable dataTable = new beaDBDataSet.rptProjectReviewDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -32119,15 +33353,6 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblPersonHourAvailabilityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblPersonHourAvailability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblPersonHourAvailabilityTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._tblUsers1TableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.tblUsersByID.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -32137,21 +33362,21 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblWorkActionsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblActivityWorkByIDTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tblWorkActionsTableAdapter.Update(updatedRows));
+                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblPersonAvailabilityTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblPersonAvailability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblPersonHourAvailabilityTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblPersonHourAvailability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tblPersonAvailabilityTableAdapter.Update(updatedRows));
+                    result = (result + this._tblPersonHourAvailabilityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -32161,6 +33386,24 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tblPersonCostTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblProjectRolesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblProjectRolesTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tblPersonAvailabilityTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblPersonAvailability.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tblPersonAvailabilityTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -32200,21 +33443,12 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tblProjectRolesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tblWorkActionsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tblProjectRolesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tblActivityWorkByIDTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(updatedRows));
+                    result = (result + this._tblWorkActionsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -32300,14 +33534,6 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblPersonHourAvailabilityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblPersonHourAvailability.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblPersonHourAvailabilityTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._tblUsers1TableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.tblUsersByID.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -32316,19 +33542,19 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblWorkActionsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblActivityWorkByIDTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tblWorkActionsTableAdapter.Update(addedRows));
+                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblPersonAvailabilityTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblPersonAvailability.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblPersonHourAvailabilityTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblPersonHourAvailability.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tblPersonAvailabilityTableAdapter.Update(addedRows));
+                    result = (result + this._tblPersonHourAvailabilityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -32337,6 +33563,22 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tblPersonCostTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblProjectRolesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblProjectRolesTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tblPersonAvailabilityTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblPersonAvailability.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tblPersonAvailabilityTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -32372,19 +33614,11 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tblProjectRolesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tblWorkActionsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tblProjectRolesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tblActivityWorkByIDTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(addedRows));
+                    result = (result + this._tblWorkActionsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -32398,19 +33632,11 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(beaDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tblActivityWorkByIDTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblWorkActionsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._tblProjectRolesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblProjectRolesTableAdapter.Update(deletedRows));
+                    result = (result + this._tblWorkActionsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -32446,14 +33672,6 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblPersonCostTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblPersonCost.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tblPersonCostTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tblPersonAvailabilityTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tblPersonAvailability.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -32462,19 +33680,19 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblWorkActionsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblWorkActions.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblProjectRolesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblProjectRoles.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblWorkActionsTableAdapter.Update(deletedRows));
+                    result = (result + this._tblProjectRolesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tblUsers1TableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tblUsersByID.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tblPersonCostTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblPersonCost.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tblUsers1TableAdapter.Update(deletedRows));
+                    result = (result + this._tblPersonCostTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -32483,6 +33701,22 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._tblPersonHourAvailabilityTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblActivityWorkByIDTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblActivityWorkByID.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblActivityWorkByIDTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._tblUsers1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tblUsersByID.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tblUsers1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

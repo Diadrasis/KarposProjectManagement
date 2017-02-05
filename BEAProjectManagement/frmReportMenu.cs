@@ -25,7 +25,7 @@ namespace BEAProjectManagement
         private void button1_Click(object sender, EventArgs e)
         {
             rptProjectReview frm = new rptProjectReview();
-            frm.projectTitle = this.comboBox1.SelectedValue.ToString();
+            frm.projectID =(int)this.comboBox1.SelectedValue;
             frm.Show();
         }
 
@@ -57,6 +57,12 @@ namespace BEAProjectManagement
             frm.tsType = 2;
             frm.Show();
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            rptProjectsReview frm = new rptProjectsReview();
+            frm.Show();
         }
     }
 }

@@ -10,20 +10,18 @@ using System.Windows.Forms;
 
 namespace BEAProjectManagement
 {
-    public partial class rptProjectReview : Form
+    public partial class rptProjectsReview : Form
     {
-        public int projectID;
-        public rptProjectReview()
+        public rptProjectsReview()
         {
             InitializeComponent();
         }
 
-        private void rptProjectReview_Load(object sender, EventArgs e)
+        private void rptProjectsReview_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'beaDBDataSet.rptProjectReview' table. You can move, or remove it, as needed.
-            this.rptProjectReviewTableAdapter.Fill(this.beaDBDataSet.rptProjectReview, projectID);
-
-            this.reportViewer1.RefreshReport();
+            this.rptProjectsReviewTableAdapter.Fill(this.beaDBDataSet.rptProjectsReview);
+            this.reportViewer1.RefreshReport();            
         }
     }
 }

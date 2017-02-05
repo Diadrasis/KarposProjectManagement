@@ -288,6 +288,12 @@
     <Compile Include="rptProjectReview.Designer.cs">
       <DependentUpon>rptProjectReview.cs</DependentUpon>
     </Compile>
+    <Compile Include="rptProjectsReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptProjectsReview.Designer.cs">
+      <DependentUpon>rptProjectsReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="rptTimeSheet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -405,9 +411,13 @@
     <EmbeddedResource Include="rptProjectReport.resx">
       <DependentUpon>rptProjectReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptProjectReview.rdlc" />
     <EmbeddedResource Include="rptProjectReview.resx">
       <DependentUpon>rptProjectReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptProjectsReview.rdlc" />
+    <EmbeddedResource Include="rptProjectReview.rdlc" />
+    <EmbeddedResource Include="rptProjectsReview.resx">
+      <DependentUpon>rptProjectsReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptProjectTest.rdlc" />
     <EmbeddedResource Include="rptTimeSheet2.rdlc" />

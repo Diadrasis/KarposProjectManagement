@@ -12478,6 +12478,12 @@ namespace BEAProjectManagement {
             
             private global::System.Data.DataColumn columnprojWorkBudget;
             
+            private global::System.Data.DataColumn columnprteamRole;
+            
+            private global::System.Data.DataColumn columnprojStart;
+            
+            private global::System.Data.DataColumn columnprojFinish;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public rptProjectsReviewDataTable() {
@@ -12593,6 +12599,30 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn prteamRoleColumn {
+                get {
+                    return this.columnprteamRole;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projStartColumn {
+                get {
+                    return this.columnprojStart;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn projFinishColumn {
+                get {
+                    return this.columnprojFinish;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -12628,7 +12658,7 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public rptProjectsReviewRow AddrptProjectsReviewRow(string projCode, string projTitle, string personFirstName, string personSurname, double prteamWorkBudget, int occupWorkDuration, double prteamBudget, double occupationCost, double projBudget, int projWorkBudget) {
+            public rptProjectsReviewRow AddrptProjectsReviewRow(string projCode, string projTitle, string personFirstName, string personSurname, double prteamWorkBudget, int occupWorkDuration, double prteamBudget, double occupationCost, double projBudget, int projWorkBudget, string prteamRole, System.DateTime projStart, System.DateTime projFinish) {
                 rptProjectsReviewRow rowrptProjectsReviewRow = ((rptProjectsReviewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         projCode,
@@ -12640,7 +12670,10 @@ namespace BEAProjectManagement {
                         prteamBudget,
                         occupationCost,
                         projBudget,
-                        projWorkBudget};
+                        projWorkBudget,
+                        prteamRole,
+                        projStart,
+                        projFinish};
                 rowrptProjectsReviewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrptProjectsReviewRow);
                 return rowrptProjectsReviewRow;
@@ -12673,6 +12706,9 @@ namespace BEAProjectManagement {
                 this.columnoccupationCost = base.Columns["occupationCost"];
                 this.columnprojBudget = base.Columns["projBudget"];
                 this.columnprojWorkBudget = base.Columns["projWorkBudget"];
+                this.columnprteamRole = base.Columns["prteamRole"];
+                this.columnprojStart = base.Columns["projStart"];
+                this.columnprojFinish = base.Columns["projFinish"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12698,10 +12734,17 @@ namespace BEAProjectManagement {
                 base.Columns.Add(this.columnprojBudget);
                 this.columnprojWorkBudget = new global::System.Data.DataColumn("projWorkBudget", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprojWorkBudget);
+                this.columnprteamRole = new global::System.Data.DataColumn("prteamRole", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprteamRole);
+                this.columnprojStart = new global::System.Data.DataColumn("projStart", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojStart);
+                this.columnprojFinish = new global::System.Data.DataColumn("projFinish", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprojFinish);
                 this.columnprojCode.MaxLength = 20;
                 this.columnprojTitle.MaxLength = 150;
                 this.columnpersonFirstName.MaxLength = 50;
                 this.columnpersonSurname.MaxLength = 150;
+                this.columnprteamRole.MaxLength = 150;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -19090,6 +19133,54 @@ namespace BEAProjectManagement {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string prteamRole {
+                get {
+                    try {
+                        return ((string)(this[this.tablerptProjectsReview.prteamRoleColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'prteamRole\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.prteamRoleColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime projStart {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablerptProjectsReview.projStartColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projStart\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projStartColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public System.DateTime projFinish {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablerptProjectsReview.projFinishColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'projFinish\' in table \'rptProjectsReview\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablerptProjectsReview.projFinishColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsprojCodeNull() {
                 return this.IsNull(this.tablerptProjectsReview.projCodeColumn);
             }
@@ -19206,6 +19297,42 @@ namespace BEAProjectManagement {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetprojWorkBudgetNull() {
                 this[this.tablerptProjectsReview.projWorkBudgetColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprteamRoleNull() {
+                return this.IsNull(this.tablerptProjectsReview.prteamRoleColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprteamRoleNull() {
+                this[this.tablerptProjectsReview.prteamRoleColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojStartNull() {
+                return this.IsNull(this.tablerptProjectsReview.projStartColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojStartNull() {
+                this[this.tablerptProjectsReview.projStartColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprojFinishNull() {
+                return this.IsNull(this.tablerptProjectsReview.projFinishColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprojFinishNull() {
+                this[this.tablerptProjectsReview.projFinishColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -32511,6 +32638,9 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
             tableMapping.ColumnMappings.Add("occupationCost", "occupationCost");
             tableMapping.ColumnMappings.Add("projBudget", "projBudget");
             tableMapping.ColumnMappings.Add("projWorkBudget", "projWorkBudget");
+            tableMapping.ColumnMappings.Add("prteamRole", "prteamRole");
+            tableMapping.ColumnMappings.Add("projStart", "projStart");
+            tableMapping.ColumnMappings.Add("projFinish", "projFinish");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -32527,9 +32657,9 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        projCode, projTitle, personFirstName, personSurname, occupWorkDurat" +
-                "ion, prteamBudget, occupationCost, projBudget, prteamWorkBudget, projWorkBudget\r" +
-                "\nFROM            rptProjectsReview";
+            this._commandCollection[0].CommandText = @"SELECT        projCode, projTitle, personFirstName, personSurname, occupWorkDuration, prteamBudget, occupationCost, projBudget, prteamWorkBudget, projWorkBudget, 
+                         prteamRole, projStart, projFinish
+FROM            rptProjectsReview";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

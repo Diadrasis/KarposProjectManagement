@@ -24,8 +24,9 @@ namespace BEAProjectManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rptProjectReview frm = new rptProjectReview();
-            frm.projectID =(int)this.comboBox1.SelectedValue;
+            //rptProjectReview frm = new rptProjectReview();
+            //frm.projectID =(int)this.comboBox1.SelectedValue;
+            frmChooseProject frm = new frmChooseProject();
             frm.Show();
         }
 
@@ -35,6 +36,11 @@ namespace BEAProjectManagement
             this.vProjectsTableAdapter.Fill(this.beaDBDataSet.vProjects);
             this.Text = "Αναφορές";
             this.comboBox1.SelectedItem = this.comboBox1.Items[1];
+
+            this.comboBox1.Visible = false;
+            this.button3.Visible = false;
+            this.button4.Visible = false;
+            this.button2.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)

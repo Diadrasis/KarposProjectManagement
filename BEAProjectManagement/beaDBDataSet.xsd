@@ -1829,7 +1829,8 @@ SELECT actwrkID, practID, actwrkCode, actwrkTitle, actwrkDesc, actwrkStart, actw
               <DbSource ConnectionRef="beaDBConnectionString (Settings)" DbObjectName="beaDB2.dbo.rptProjectsReview" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT        projCode, projTitle, personFirstName, personSurname, occupWorkDuration, prteamBudget, occupationCost, projBudget, prteamWorkBudget, projWorkBudget
+                    <CommandText>SELECT        projCode, projTitle, personFirstName, personSurname, occupWorkDuration, prteamBudget, occupationCost, projBudget, prteamWorkBudget, projWorkBudget, 
+                         prteamRole, projStart, projFinish
 FROM            rptProjectsReview</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -1847,6 +1848,9 @@ FROM            rptProjectsReview</CommandText>
               <Mapping SourceColumn="occupationCost" DataSetColumn="occupationCost" />
               <Mapping SourceColumn="projBudget" DataSetColumn="projBudget" />
               <Mapping SourceColumn="projWorkBudget" DataSetColumn="projWorkBudget" />
+              <Mapping SourceColumn="prteamRole" DataSetColumn="prteamRole" />
+              <Mapping SourceColumn="projStart" DataSetColumn="projStart" />
+              <Mapping SourceColumn="projFinish" DataSetColumn="projFinish" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -2718,6 +2722,15 @@ WHERE        (projID = @projID)</CommandText>
               <xs:element name="occupationCost" msprop:Generator_ColumnVarNameInTable="columnoccupationCost" msprop:Generator_ColumnPropNameInRow="occupationCost" msprop:Generator_ColumnPropNameInTable="occupationCostColumn" msprop:Generator_UserColumnName="occupationCost" type="xs:double" minOccurs="0" />
               <xs:element name="projBudget" msprop:Generator_ColumnVarNameInTable="columnprojBudget" msprop:Generator_ColumnPropNameInRow="projBudget" msprop:Generator_ColumnPropNameInTable="projBudgetColumn" msprop:Generator_UserColumnName="projBudget" type="xs:double" minOccurs="0" />
               <xs:element name="projWorkBudget" msprop:Generator_ColumnVarNameInTable="columnprojWorkBudget" msprop:Generator_ColumnPropNameInRow="projWorkBudget" msprop:Generator_ColumnPropNameInTable="projWorkBudgetColumn" msprop:Generator_UserColumnName="projWorkBudget" type="xs:int" minOccurs="0" />
+              <xs:element name="prteamRole" msprop:Generator_ColumnVarNameInTable="columnprteamRole" msprop:Generator_ColumnPropNameInRow="prteamRole" msprop:Generator_ColumnPropNameInTable="prteamRoleColumn" msprop:Generator_UserColumnName="prteamRole" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="projStart" msprop:Generator_ColumnVarNameInTable="columnprojStart" msprop:Generator_ColumnPropNameInRow="projStart" msprop:Generator_ColumnPropNameInTable="projStartColumn" msprop:Generator_UserColumnName="projStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="projFinish" msprop:Generator_ColumnVarNameInTable="columnprojFinish" msprop:Generator_ColumnPropNameInRow="projFinish" msprop:Generator_ColumnPropNameInTable="projFinishColumn" msprop:Generator_UserColumnName="projFinish" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

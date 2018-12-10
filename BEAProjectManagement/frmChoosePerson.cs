@@ -28,6 +28,8 @@ namespace BEAProjectManagement
             // TODO: This line of code loads data into the 'beaDBDataSet.vPersons' table. You can move, or remove it, as needed.
             this.vPersonsTableAdapter.Fill(this.beaDBDataSet.vPersons);
 
+            this.Text = "Επιλογή Εργαζόμενου Χρονικής Περιόδου";
+
         }
        
 

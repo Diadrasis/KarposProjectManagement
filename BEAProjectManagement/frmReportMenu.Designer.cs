@@ -47,7 +47,7 @@
             // 
             this.button1.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(59, 368);
+            this.button1.Location = new System.Drawing.Point(59, 277);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(275, 64);
             this.button1.TabIndex = 3;
@@ -59,7 +59,7 @@
             // 
             this.button2.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(649, 219);
+            this.button2.Location = new System.Drawing.Point(649, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(275, 64);
             this.button2.TabIndex = 4;
@@ -71,7 +71,7 @@
             // 
             this.button3.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(59, 219);
+            this.button3.Location = new System.Drawing.Point(354, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(275, 64);
             this.button3.TabIndex = 5;
@@ -84,7 +84,7 @@
             this.comboBox1.DataSource = this.vProjectsBindingSource;
             this.comboBox1.DisplayMember = "projTitle";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(59, 152);
+            this.comboBox1.Location = new System.Drawing.Point(59, 109);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(275, 21);
             this.comboBox1.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             this.button4.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(59, 289);
+            this.button4.Location = new System.Drawing.Point(59, 136);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(275, 64);
             this.button4.TabIndex = 7;
@@ -120,7 +120,7 @@
             // 
             this.button5.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(649, 289);
+            this.button5.Location = new System.Drawing.Point(649, 277);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(275, 64);
             this.button5.TabIndex = 8;
@@ -132,7 +132,7 @@
             // 
             this.button6.Image = global::BEAProjectManagement.Properties.Resources.gears;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(355, 219);
+            this.button6.Location = new System.Drawing.Point(354, 277);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(275, 64);
             this.button6.TabIndex = 9;

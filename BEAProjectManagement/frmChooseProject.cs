@@ -28,7 +28,8 @@ namespace BEAProjectManagement
         {
             if (this.comboBox1.SelectedValue != System.DBNull.Value)
             {
-                rptProjectChart frm = new rptProjectChart();
+                //rptProjectChart frm = new rptProjectChart();
+                rptProjectReview frm = new rptProjectReview();
                 frm.projectID = (int)this.comboBox1.SelectedValue;
                 frm.Show();
                 //this.Close();

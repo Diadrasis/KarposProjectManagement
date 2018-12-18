@@ -109,7 +109,7 @@ namespace BEAProjectManagement
         {
 
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetProjectAvailableHours";
@@ -154,7 +154,7 @@ namespace BEAProjectManagement
         static public Tuple<int, int> GetActivityWorkBudget(int activityID)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetProjectActivityRemainingWorkBudget";

@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BEAProjectManagement.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="beaDBConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="karposDBConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=.\SQLEXPRESS;Initial Catalog=beaDB2;Persist Security Info=True;User ID=sa;Password=!diadrasis$&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=www.diadrasis.net,1512;Initial Catalog=karpos_pm_db;Persist Security Info=True;User ID=diadrasis_sa;Password=D1aDr@$1S&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=.\SQLEXPRESS;Initial Catalog=beaDB2;Persist Security Info=True;User ID=sa;Password=!diadrasis$</Value>
+      <Value Profile="(Default)">Data Source=www.diadrasis.net,1512;Initial Catalog=karpos_pm_db;Persist Security Info=True;User ID=diadrasis_sa;Password=D1aDr@$1S</Value>
     </Setting>
   </Settings>
 </SettingsFile>

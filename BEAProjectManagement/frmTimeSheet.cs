@@ -193,7 +193,7 @@ namespace BEAProjectManagement
         private int GetPersonDayWorkedHours(int person, DateTime date, int occup)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetPersonDayWorkedHours";

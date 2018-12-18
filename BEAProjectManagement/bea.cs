@@ -21,7 +21,7 @@ namespace BEAProjectManagement
         static public Tuple<int, int> GetProjectAvailableHours(int projectID)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetProjectAvailableHours2";
@@ -74,7 +74,7 @@ namespace BEAProjectManagement
         static public string GetCurrentProject(int projectID)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetProjectTitle";
@@ -120,7 +120,7 @@ namespace BEAProjectManagement
         static public string GetCurrentPerson(int personID)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetPersonFullName";
@@ -166,7 +166,7 @@ namespace BEAProjectManagement
         static public string GetCurrentActivity(int activityID)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetActivityTitle";
@@ -212,7 +212,7 @@ namespace BEAProjectManagement
         static public int GetPersonAvailableProjectWorkdays(int project, int person)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetPersonAvailableProjectWorkdays";
@@ -265,7 +265,7 @@ namespace BEAProjectManagement
         static public int GetPersonAvailableActivitiesWorkdays(int project, int person)
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             SqlCommand command = new SqlCommand();
             command.CommandText = "pGetPersonAvailableActivityWorkdays";

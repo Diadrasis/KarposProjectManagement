@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BEAProjectManagement", "BEAProjectManagement\BEAProjectManagement.csproj", "{8B11410D-2E73-46D3-A5F9-E0D82E6D578C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KarposProjectManagement", "BEAProjectManagement\KarposProjectManagement.csproj", "{8B11410D-2E73-46D3-A5F9-E0D82E6D578C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBC51669-40B0-4526-9EB0-4DF1AA4B613F}
 	EndGlobalSection
 EndGlobal

@@ -12,7 +12,7 @@ namespace BEAProjectManagement.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,11 +26,11 @@ namespace BEAProjectManagement.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=beaDB2;Persist Security Info=True;User I" +
-            "D=sa;Password=!diadrasis$")]
-        public string beaDBConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=www.diadrasis.net,1512;Initial Catalog=karpos_pm_db;Persist Security " +
+            "Info=True;User ID=diadrasis_sa;Password=D1aDr@$1S")]
+        public string karposDBConnectionString {
             get {
-                return ((string)(this["beaDBConnectionString"]));
+                return ((string)(this["karposDBConnectionString"]));
             }
         }
     }

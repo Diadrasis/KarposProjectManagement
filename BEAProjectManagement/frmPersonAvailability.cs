@@ -40,8 +40,8 @@ namespace BEAProjectManagement
             this.lblPersonel.Text = bea.currentPerson;
             this.lblPersonel.Location = new Point(320, 110);
 
-            dgv.Width = 600;
-            dgv.Height = 200;
+            dgv.Width = 700;
+            dgv.Height = 300;
 
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
 

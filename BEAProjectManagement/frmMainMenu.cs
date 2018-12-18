@@ -19,7 +19,7 @@ namespace BEAProjectManagement
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmParametersMenu frm = new frmParametersMenu();
+            frmResourcesMenu frm = new frmResourcesMenu();
             frm.Show();
             //NoConnection();
         }
@@ -40,9 +40,10 @@ namespace BEAProjectManagement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmPersons frm = new frmPersons();
-            frm.Show();
+            
             //NoConnection();
+            frmReportingMenu frm = new frmReportingMenu();
+            frm.Show();
         }
 
         private void NoConnection()
@@ -62,6 +63,12 @@ namespace BEAProjectManagement
 
             }
             */
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmParametersMenu frm = new frmParametersMenu();
+            frm.Show();
         }
     }
 }

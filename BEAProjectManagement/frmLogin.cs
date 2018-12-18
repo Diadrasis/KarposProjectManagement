@@ -19,7 +19,7 @@ namespace BEAProjectManagement
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.Text = "Είσοδος";
-            this.label4.Text = "v 1.0.0.34";
+            this.label4.Text = "v 1.0.0.38";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace BEAProjectManagement
             //{
 
                 SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+                conn.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
                 SqlCommand command = new SqlCommand();
                 command.CommandText = "pGetUserData";

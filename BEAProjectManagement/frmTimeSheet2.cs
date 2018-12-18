@@ -68,7 +68,7 @@ namespace BEAProjectManagement
             projectIDs = new List<int>();
 
             con = new SqlConnection();
-            con.ConnectionString = Properties.Settings.Default.beaDBConnectionString;
+            con.ConnectionString = Properties.Settings.Default.karposDBConnectionString;
 
             com = new SqlCommand();
             com.CommandText = "pGetPersonProjects";

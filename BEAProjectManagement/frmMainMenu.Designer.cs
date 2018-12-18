@@ -34,6 +34,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelUser = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Image = global::BEAProjectManagement.Properties.Resources.clipboard;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(172, 146);
+            this.button1.Location = new System.Drawing.Point(172, 138);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 65);
             this.button1.TabIndex = 3;
@@ -53,9 +54,9 @@
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Image = global::BEAProjectManagement.Properties.Resources.personel;
+            this.button2.Image = global::BEAProjectManagement.Properties.Resources.reporting;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(549, 146);
+            this.button2.Location = new System.Drawing.Point(527, 138);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(272, 65);
             this.button2.TabIndex = 4;
@@ -66,13 +67,13 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.Image = global::BEAProjectManagement.Properties.Resources.persons;
+            this.button3.Image = global::BEAProjectManagement.Properties.Resources.personel1;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(549, 247);
+            this.button3.Location = new System.Drawing.Point(527, 227);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(272, 65);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Πόροι";
+            this.button3.Text = "Προσωπικό";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -81,7 +82,7 @@
             this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button4.Image = global::BEAProjectManagement.Properties.Resources.Management;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(172, 247);
+            this.button4.Location = new System.Drawing.Point(172, 227);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(274, 65);
             this.button4.TabIndex = 5;
@@ -107,10 +108,24 @@
             this.labelUser.TabIndex = 8;
             this.labelUser.Text = "label2";
             // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.Image = global::BEAProjectManagement.Properties.Resources.persons;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(323, 311);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(272, 65);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Χρήστες";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1008, 388);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.labelUser);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button3);
@@ -126,6 +141,7 @@
             this.Controls.SetChildIndex(this.button3, 0);
             this.Controls.SetChildIndex(this.pictureBox3, 0);
             this.Controls.SetChildIndex(this.labelUser, 0);
+            this.Controls.SetChildIndex(this.button5, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,5 +156,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label labelUser;
+        private System.Windows.Forms.Button button5;
     }
 }

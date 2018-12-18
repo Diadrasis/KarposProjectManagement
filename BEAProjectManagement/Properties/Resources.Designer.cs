@@ -19,7 +19,7 @@ namespace BEAProjectManagement.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -163,6 +163,26 @@ namespace BEAProjectManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_karpos_big {
+            get {
+                object obj = ResourceManager.GetObject("logo_karpos_big", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_karpos_gr {
+            get {
+                object obj = ResourceManager.GetObject("logo_karpos_gr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Management {
             get {
                 object obj = ResourceManager.GetObject("Management", resourceCulture);
@@ -203,6 +223,16 @@ namespace BEAProjectManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap personel1 {
+            get {
+                object obj = ResourceManager.GetObject("personel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap persons {
             get {
                 object obj = ResourceManager.GetObject("persons", resourceCulture);
@@ -236,6 +266,16 @@ namespace BEAProjectManagement.Properties {
         internal static System.Drawing.Bitmap ProjectManagementVertical {
             get {
                 object obj = ResourceManager.GetObject("ProjectManagementVertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reporting {
+            get {
+                object obj = ResourceManager.GetObject("reporting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

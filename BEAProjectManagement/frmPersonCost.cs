@@ -27,7 +27,6 @@ namespace BEAProjectManagement
             this.Validate();
             this.tblPersonCostBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.beaDBDataSet);
-
         }
 
        

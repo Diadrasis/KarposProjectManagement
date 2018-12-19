@@ -35,8 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblProjectsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.tblProjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.beaDBDataSet = new BEAProjectManagement.beaDBDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +51,8 @@
             this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
             this.labelUser = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tblProjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.beaDBDataSet = new BEAProjectManagement.beaDBDataSet();
             this.tblProjectsTableAdapter = new BEAProjectManagement.beaDBDataSetTableAdapters.tblProjectsTableAdapter();
             this.tableAdapterManager = new BEAProjectManagement.beaDBDataSetTableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,16 +63,19 @@
             this.projFinish = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.projTotalBudget = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.projBudget = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projContribution = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projCoFinance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projBudget = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.projBudg = new System.Windows.Forms.DataGridViewImageColumn();
             this.projTeam = new System.Windows.Forms.DataGridViewImageColumn();
             this.projActivities = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingNavigator)).BeginInit();
             this.tblProjectsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProjectsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tblProjectsBindingNavigator
@@ -114,16 +117,6 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // tblProjectsBindingSource
-            // 
-            this.tblProjectsBindingSource.DataMember = "tblProjects";
-            this.tblProjectsBindingSource.DataSource = this.beaDBDataSet;
-            // 
-            // beaDBDataSet
-            // 
-            this.beaDBDataSet.DataSetName = "beaDBDataSet";
-            this.beaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -224,8 +217,11 @@
             this.projFinish,
             this.dataGridViewTextBoxColumn5,
             this.projTotalBudget,
-            this.projBudget,
+            this.projContribution,
+            this.projCoFinance,
             this.dataGridViewTextBoxColumn6,
+            this.projBudget,
+            this.projBudg,
             this.projTeam,
             this.projActivities});
             this.tblProjectsDataGridView.DataSource = this.tblProjectsBindingSource;
@@ -242,8 +238,8 @@
             this.tblProjectsDataGridView.Name = "tblProjectsDataGridView";
             this.tblProjectsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tblProjectsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblProjectsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblProjectsDataGridView.Size = new System.Drawing.Size(684, 220);
+            this.tblProjectsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.tblProjectsDataGridView.Size = new System.Drawing.Size(893, 220);
             this.tblProjectsDataGridView.TabIndex = 2;
             this.tblProjectsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblProjectsDataGridView_CellContentClick);
             this.tblProjectsDataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblProjectsDataGridView_RowValidated);
@@ -282,6 +278,16 @@
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
             // 
+            // tblProjectsBindingSource
+            // 
+            this.tblProjectsBindingSource.DataMember = "tblProjects";
+            this.tblProjectsBindingSource.DataSource = this.beaDBDataSet;
+            // 
+            // beaDBDataSet
+            // 
+            this.beaDBDataSet.DataSetName = "beaDBDataSet";
+            this.beaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tblProjectsTableAdapter
             // 
             this.tblProjectsTableAdapter.ClearBeforeFill = true;
@@ -290,6 +296,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.tblActivityTeamTableAdapter = null;
+            this.tableAdapterManager.tblActivityWorkByIDTableAdapter = null;
             this.tableAdapterManager.tblActivityWorksTableAdapter = null;
             this.tableAdapterManager.tblAvailabilityTableAdapter = null;
             this.tableAdapterManager.tblDepartmentsTableAdapter = null;
@@ -363,6 +370,24 @@
             this.projTotalBudget.HeaderText = "projTotalBudget";
             this.projTotalBudget.Name = "projTotalBudget";
             // 
+            // projContribution
+            // 
+            this.projContribution.DataPropertyName = "projContribution";
+            this.projContribution.HeaderText = "projContribution";
+            this.projContribution.Name = "projContribution";
+            // 
+            // projCoFinance
+            // 
+            this.projCoFinance.DataPropertyName = "projCoFinance";
+            this.projCoFinance.HeaderText = "projCoFinance";
+            this.projCoFinance.Name = "projCoFinance";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "projWorkBudget";
+            this.dataGridViewTextBoxColumn6.HeaderText = "projWorkBudget";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
             // projBudget
             // 
             this.projBudget.DataPropertyName = "projBudget";
@@ -373,11 +398,11 @@
             this.projBudget.HeaderText = "projBudget";
             this.projBudget.Name = "projBudget";
             // 
-            // dataGridViewTextBoxColumn6
+            // projBudg
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "projWorkBudget";
-            this.dataGridViewTextBoxColumn6.HeaderText = "projWorkBudget";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.projBudg.HeaderText = "Column1";
+            this.projBudg.Image = global::BEAProjectManagement.Properties.Resources.budget;
+            this.projBudg.Name = "projBudg";
             // 
             // projTeam
             // 
@@ -412,10 +437,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingNavigator)).EndInit();
             this.tblProjectsBindingNavigator.ResumeLayout(false);
             this.tblProjectsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblProjectsDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,8 +478,11 @@
         private System.Windows.Forms.DataGridViewImageColumn projFinish;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn projTotalBudget;
-        private System.Windows.Forms.DataGridViewTextBoxColumn projBudget;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projContribution;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projCoFinance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn projBudget;
+        private System.Windows.Forms.DataGridViewImageColumn projBudg;
         private System.Windows.Forms.DataGridViewImageColumn projTeam;
         private System.Windows.Forms.DataGridViewImageColumn projActivities;
     }

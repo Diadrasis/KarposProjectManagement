@@ -49,6 +49,7 @@ namespace BEAProjectManagement
             this.monthCalendar2.Visible = false;
 
             //this.WindowState = FormWindowState.Maximized;
+            this.Width = 1400;
 
             this.Text = "Έργα";
             this.labelUser.Text = bea.userFullName;
@@ -74,11 +75,14 @@ namespace BEAProjectManagement
             dgv.Columns["projFinish"].HeaderText = "";
             dgv.Columns["projFinish"].Width = 50;
 
-            
-
             dgv.Columns["projTotalBudget"].HeaderText = "Συνολικός ΠΥ";
             dgv.Columns["projTotalBudget"].Width = 110;
 
+            dgv.Columns["projContribution"].HeaderText = "Χρηματοδοτούμενος ΠΥ";
+            dgv.Columns["projContribution"].Width = 110;
+
+            dgv.Columns["projCoFinance"].HeaderText = "Ιδιωτική Συμμετοχή ";
+            dgv.Columns["projCoFinance"].Width = 110;
 
             dgv.Columns["projBudget"].HeaderText = "ΠΥ Προσωπικού";
             dgv.Columns["projBudget"].Width = 130;
@@ -86,6 +90,9 @@ namespace BEAProjectManagement
             dgv.Columns["dataGridViewTextBoxColumn6"].HeaderText = "Απασχόληση";
             dgv.Columns["dataGridViewTextBoxColumn6"].Width = 130;
             dgv.Columns["dataGridViewTextBoxColumn6"].Visible = false;
+
+            dgv.Columns["projBudg"].HeaderText = "Προυπολογισμός";
+            dgv.Columns["projBudg"].Width = 110;           
 
             dgv.Columns["projActivities"].HeaderText = "Δραστηριότητες";
             dgv.Columns["projActivities"].Width = 110;
@@ -135,6 +142,14 @@ namespace BEAProjectManagement
                     frmProjectTeam frm = new frmProjectTeam();
                     frm.projectID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     bea.currentProject = bea.GetCurrentProject(frm.projectID);                    
+                    frm.Show();
+                }
+
+                if (e.ColumnIndex == dgv.Columns["projBudg"].Index)
+                {
+                    frmProjectBudgetDetails frm = new frmProjectBudgetDetails();
+                    frm.projID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
+                    bea.currentProject = bea.GetCurrentProject(frm.projID);
                     frm.Show();
                 }
             }           

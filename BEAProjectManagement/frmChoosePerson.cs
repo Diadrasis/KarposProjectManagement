@@ -13,6 +13,7 @@ namespace BEAProjectManagement
     public partial class frmChoosePerson : Form
     {
         public int tsType;
+        public string openForm;
 
         public frmChoosePerson()
         {
@@ -30,6 +31,12 @@ namespace BEAProjectManagement
 
             this.Text = "Επιλογή Εργαζόμενου Χρονικής Περιόδου";
 
+            if (this.openForm== "staffPayments")
+            {
+                this.comboBox2.Visible = false;
+                this.comboBox3.Visible = false;
+            }
+
         }
        
 
@@ -43,22 +50,34 @@ namespace BEAProjectManagement
             DateTime dateTo = new DateTime();
             dateTo = (dateFrom.AddMonths(1)).AddDays(-1);
 
-            if (this.tsType == 1)            {
 
-                rptTimeSheet frm = new rptTimeSheet();
-                frm.rpDateFrom = dateFrom;
-                frm.rpDateTo = dateTo;
+            if (this.openForm == "staffPayments")
+            {
+                frmStaffPayments frm = new frmStaffPayments();
+                frm.personID = (int)this.comboBox1.SelectedValue;
                 frm.Show();
-
             }
             else
             {
-                rptTimeSheet2 frm2 = new rptTimeSheet2();
-                frm2.personID =(int)this.comboBox1.SelectedValue;
-                frm2.personName = this.comboBox1.Text;
-                frm2.rpDateFrom = dateFrom;
-                frm2.rpDateTo = dateTo;
-                frm2.Show();
+
+                if (this.tsType == 1)
+                {
+
+                    rptTimeSheet frm = new rptTimeSheet();
+                    frm.rpDateFrom = dateFrom;
+                    frm.rpDateTo = dateTo;
+                    frm.Show();
+
+                }
+                else
+                {
+                    rptTimeSheet2 frm2 = new rptTimeSheet2();
+                    frm2.personID = (int)this.comboBox1.SelectedValue;
+                    frm2.personName = this.comboBox1.Text;
+                    frm2.rpDateFrom = dateFrom;
+                    frm2.rpDateTo = dateTo;
+                    frm2.Show();
+                }
             }
 
           

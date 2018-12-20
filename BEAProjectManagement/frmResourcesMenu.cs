@@ -14,5 +14,17 @@ namespace BEAProjectManagement
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmStaffContracts frm = new frmStaffContracts();
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmPersons frm = new frmPersons();
+            frm.Show();
+        }
     }
 }

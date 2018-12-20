@@ -140,7 +140,7 @@ namespace BEAProjectManagement
                 }
             }
 
-            }
+        }
 
         private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
         {

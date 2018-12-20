@@ -147,7 +147,7 @@ namespace BEAProjectManagement
 
                 if (e.ColumnIndex == dgv.Columns["projBudg"].Index)
                 {
-                    frmProjectBudgetDetails frm = new frmProjectBudgetDetails();
+                    frmProjectBudget frm = new frmProjectBudget();
                     frm.projID = Convert.ToInt16(dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn1"].Value);
                     bea.currentProject = bea.GetCurrentProject(frm.projID);
                     frm.Show();

@@ -40,10 +40,30 @@ namespace BEAProjectManagement
             dgv.Columns["dataGridViewTextBoxColumn1"].Visible = false;
 
             dgv.Columns["dataGridViewTextBoxColumn2"].HeaderText = "Όνομα";
-            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 250;
+            dgv.Columns["dataGridViewTextBoxColumn2"].Width = 200;
 
             dgv.Columns["dataGridViewTextBoxColumn3"].HeaderText = "Επώνυμο";
-            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 250;
+            dgv.Columns["dataGridViewTextBoxColumn3"].Width = 200;
+
+            dgv.Columns["personActive"].HeaderText = "Ενεργός";
+            dgv.Columns["personActive"].Width = 40;
+
+            dgv.Columns["currentMonthCost"].HeaderText = "Μηνιαίο";
+            dgv.Columns["currentMonthCost"].Width = 70;
+            DesignHelper.InactivateColumn(dgv, dgv.Columns["currentMonthCost"].Index);
+
+            dgv.Columns["currentWeekCost"].HeaderText = "Εβδομαδιαίο";
+            dgv.Columns["currentWeekCost"].Width = 40;
+            dgv.Columns["currentWeekCost"].Visible = false;
+
+
+            dgv.Columns["currentDayCost"].HeaderText = "Ημερήσιο";
+            dgv.Columns["currentDayCost"].Width = 70;
+            DesignHelper.InactivateColumn(dgv, dgv.Columns["currentDayCost"].Index);
+
+            dgv.Columns["currentHourCost"].HeaderText = "Ωριαίο";
+            dgv.Columns["currentHourCost"].Width = 70;
+            DesignHelper.InactivateColumn(dgv, dgv.Columns["currentHourCost"].Index);
 
             dgv.Columns["dataGridViewTextBoxColumn4"].Visible = false;
 
@@ -110,6 +130,11 @@ namespace BEAProjectManagement
             {
                 MessageBox.Show("Ο εργαζόμενος πρέπει να έχει επώνυμο!");
                 dgv.Rows[e.RowIndex].Cells["dataGridViewTextBoxColumn3"].Value = "Επώνυμο";
+            }
+
+            if (dgv.Rows[e.RowIndex].Cells["personActive"].Value == System.DBNull.Value)
+            {                
+                dgv.Rows[e.RowIndex].Cells["personActive"].Value = false;
             }
         }
     }

@@ -118,11 +118,11 @@
     <Compile Include="frmActivityWorks.Designer.cs">
       <DependentUpon>frmActivityWorks.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProjectBudgetDetails.cs">
+    <Compile Include="frmProjectBudget.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProjectBudgetDetails.Designer.cs">
-      <DependentUpon>frmProjectBudgetDetails.cs</DependentUpon>
+    <Compile Include="frmProjectBudget.Designer.cs">
+      <DependentUpon>frmProjectBudget.cs</DependentUpon>
     </Compile>
     <Compile Include="frmChoosePerson.cs">
       <SubType>Form</SubType>
@@ -184,11 +184,17 @@
     <Compile Include="frmProjectActivities.Designer.cs">
       <DependentUpon>frmProjectActivities.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProjectBudget.cs">
+    <Compile Include="frmProjectExpences.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProjectBudget.Designer.cs">
-      <DependentUpon>frmProjectBudget.cs</DependentUpon>
+    <Compile Include="frmProjectExpences.Designer.cs">
+      <DependentUpon>frmProjectExpences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProjectPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProjectPayments.Designer.cs">
+      <DependentUpon>frmProjectPayments.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProjects.cs">
       <SubType>Form</SubType>
@@ -219,6 +225,18 @@
     </Compile>
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffContracts.Designer.cs">
+      <DependentUpon>frmStaffContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffPayments.Designer.cs">
+      <DependentUpon>frmStaffPayments.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTemplate.cs">
       <SubType>Form</SubType>
@@ -339,8 +357,8 @@
     <EmbeddedResource Include="frmActivityWorks.resx">
       <DependentUpon>frmActivityWorks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProjectBudgetDetails.resx">
-      <DependentUpon>frmProjectBudgetDetails.cs</DependentUpon>
+    <EmbeddedResource Include="frmProjectBudget.resx">
+      <DependentUpon>frmProjectBudget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChoosePerson.resx">
       <DependentUpon>frmChoosePerson.cs</DependentUpon>
@@ -372,6 +390,12 @@
     <EmbeddedResource Include="frmProjectActivities.resx">
       <DependentUpon>frmProjectActivities.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectExpences.resx">
+      <DependentUpon>frmProjectExpences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProjectPayments.resx">
+      <DependentUpon>frmProjectPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmProjects.resx">
       <DependentUpon>frmProjects.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,6 +410,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffContracts.resx">
+      <DependentUpon>frmStaffContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffPayments.resx">
+      <DependentUpon>frmStaffPayments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTemplate.resx">
       <DependentUpon>frmTemplate.cs</DependentUpon>

@@ -7,9 +7,12 @@
     }
 }
 
-namespace BEAProjectManagement.beaDBDataSetTableAdapters {
-    
-    
+namespace BEAProjectManagement.beaDBDataSetTableAdapters
+{
+    partial class tblStaffContractsTableAdapter
+    {
+    }
+
     public partial class rptProjectDesignTableAdapter {
     }
 }

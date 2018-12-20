@@ -1,6 +1,6 @@
 ﻿namespace BEAProjectManagement
 {
-    partial class frmPersons
+    partial class frmProjectExpences
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPersons));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProjectExpences));
             this.beaDBDataSet = new BEAProjectManagement.beaDBDataSet();
-            this.tblPersonsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblPersonsTableAdapter = new BEAProjectManagement.beaDBDataSetTableAdapters.tblPersonsTableAdapter();
+            this.tblProjectSpendigsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblProjectSpendigsTableAdapter = new BEAProjectManagement.beaDBDataSetTableAdapters.tblProjectSpendigsTableAdapter();
             this.tableAdapterManager = new BEAProjectManagement.beaDBDataSetTableAdapters.TableAdapterManager();
-            this.tblPersonsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.tblProjectSpendigsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,26 +46,27 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tblPersonsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.tblPersonsDataGridView = new System.Windows.Forms.DataGridView();
+            this.tblProjectSpendigsBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.tblProjectSpendigsDataGridView = new System.Windows.Forms.DataGridView();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.lblCurrentProject = new System.Windows.Forms.Label();
+            this.vCostTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vCostTypesTableAdapter = new BEAProjectManagement.beaDBDataSetTableAdapters.vCostTypesTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.personActive = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.currentMonthCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentWeekCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentDayCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentHourCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Availability = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Cost = new System.Windows.Forms.DataGridViewImageColumn();
-            this.timeSheet = new System.Windows.Forms.DataGridViewImageColumn();
-            this.TimeSheet2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colCalendar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsBindingNavigator)).BeginInit();
-            this.tblPersonsBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsBindingNavigator)).BeginInit();
+            this.tblProjectSpendigsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vCostTypesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // beaDBDataSet
@@ -73,14 +74,14 @@
             this.beaDBDataSet.DataSetName = "beaDBDataSet";
             this.beaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tblPersonsBindingSource
+            // tblProjectSpendigsBindingSource
             // 
-            this.tblPersonsBindingSource.DataMember = "tblPersons";
-            this.tblPersonsBindingSource.DataSource = this.beaDBDataSet;
+            this.tblProjectSpendigsBindingSource.DataMember = "tblProjectSpendigs";
+            this.tblProjectSpendigsBindingSource.DataSource = this.beaDBDataSet;
             // 
-            // tblPersonsTableAdapter
+            // tblProjectSpendigsTableAdapter
             // 
-            this.tblPersonsTableAdapter.ClearBeforeFill = true;
+            this.tblProjectSpendigsTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -95,16 +96,14 @@
             this.tableAdapterManager.tblPersonAvailabilityTableAdapter = null;
             this.tableAdapterManager.tblPersonCostTableAdapter = null;
             this.tableAdapterManager.tblPersonHourAvailabilityTableAdapter = null;
-            this.tableAdapterManager.tblPersonsTableAdapter = this.tblPersonsTableAdapter;
+            this.tableAdapterManager.tblPersonsTableAdapter = null;
             this.tableAdapterManager.tblProjectActivitiesTableAdapter = null;
             this.tableAdapterManager.tblProjectBudgetTableAdapter = null;
             this.tableAdapterManager.tblProjectPaymentsTableAdapter = null;
             this.tableAdapterManager.tblProjectRolesTableAdapter = null;
-            this.tableAdapterManager.tblProjectSpendigsTableAdapter = null;
+            this.tableAdapterManager.tblProjectSpendigsTableAdapter = this.tblProjectSpendigsTableAdapter;
             this.tableAdapterManager.tblProjectsTableAdapter = null;
             this.tableAdapterManager.tblProjectTeamTableAdapter = null;
-            this.tableAdapterManager.tblStaffContractsTableAdapter = null;
-            this.tableAdapterManager.tblStaffPaymentsTableAdapter = null;
             this.tableAdapterManager.tblUserRolesTableAdapter = null;
             this.tableAdapterManager.tblUsers1TableAdapter = null;
             this.tableAdapterManager.tblUsersTableAdapter = null;
@@ -112,13 +111,13 @@
             this.tableAdapterManager.tblYearsTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = BEAProjectManagement.beaDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tblPersonsBindingNavigator
+            // tblProjectSpendigsBindingNavigator
             // 
-            this.tblPersonsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.tblPersonsBindingNavigator.BindingSource = this.tblPersonsBindingSource;
-            this.tblPersonsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tblPersonsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.tblPersonsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tblProjectSpendigsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.tblProjectSpendigsBindingNavigator.BindingSource = this.tblProjectSpendigsBindingSource;
+            this.tblProjectSpendigsBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.tblProjectSpendigsBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.tblProjectSpendigsBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -130,17 +129,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.tblPersonsBindingNavigatorSaveItem});
-            this.tblPersonsBindingNavigator.Location = new System.Drawing.Point(0, 90);
-            this.tblPersonsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tblPersonsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tblPersonsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tblPersonsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tblPersonsBindingNavigator.Name = "tblPersonsBindingNavigator";
-            this.tblPersonsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tblPersonsBindingNavigator.Size = new System.Drawing.Size(1008, 25);
-            this.tblPersonsBindingNavigator.TabIndex = 1;
-            this.tblPersonsBindingNavigator.Text = "bindingNavigator1";
+            this.tblProjectSpendigsBindingNavigatorSaveItem});
+            this.tblProjectSpendigsBindingNavigator.Location = new System.Drawing.Point(0, 90);
+            this.tblProjectSpendigsBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.tblProjectSpendigsBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.tblProjectSpendigsBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.tblProjectSpendigsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.tblProjectSpendigsBindingNavigator.Name = "tblProjectSpendigsBindingNavigator";
+            this.tblProjectSpendigsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.tblProjectSpendigsBindingNavigator.Size = new System.Drawing.Size(1008, 25);
+            this.tblProjectSpendigsBindingNavigator.TabIndex = 3;
+            this.tblProjectSpendigsBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -227,140 +226,144 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // tblPersonsBindingNavigatorSaveItem
+            // tblProjectSpendigsBindingNavigatorSaveItem
             // 
-            this.tblPersonsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tblPersonsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblPersonsBindingNavigatorSaveItem.Image")));
-            this.tblPersonsBindingNavigatorSaveItem.Name = "tblPersonsBindingNavigatorSaveItem";
-            this.tblPersonsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.tblPersonsBindingNavigatorSaveItem.Text = "Save Data";
-            this.tblPersonsBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblPersonsBindingNavigatorSaveItem_Click);
+            this.tblProjectSpendigsBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tblProjectSpendigsBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tblProjectSpendigsBindingNavigatorSaveItem.Image")));
+            this.tblProjectSpendigsBindingNavigatorSaveItem.Name = "tblProjectSpendigsBindingNavigatorSaveItem";
+            this.tblProjectSpendigsBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.tblProjectSpendigsBindingNavigatorSaveItem.Text = "Save Data";
+            this.tblProjectSpendigsBindingNavigatorSaveItem.Click += new System.EventHandler(this.tblProjectSpendigsBindingNavigatorSaveItem_Click);
             // 
-            // tblPersonsDataGridView
+            // tblProjectSpendigsDataGridView
             // 
-            this.tblPersonsDataGridView.AutoGenerateColumns = false;
-            this.tblPersonsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblPersonsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tblProjectSpendigsDataGridView.AutoGenerateColumns = false;
+            this.tblProjectSpendigsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tblProjectSpendigsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn2,
-            this.personActive,
-            this.currentMonthCost,
-            this.currentWeekCost,
-            this.currentDayCost,
-            this.currentHourCost,
+            this.colCalendar,
+            this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn4,
-            this.Availability,
-            this.Cost,
-            this.timeSheet,
-            this.TimeSheet2});
-            this.tblPersonsDataGridView.DataSource = this.tblPersonsBindingSource;
-            this.tblPersonsDataGridView.Location = new System.Drawing.Point(117, 161);
-            this.tblPersonsDataGridView.MultiSelect = false;
-            this.tblPersonsDataGridView.Name = "tblPersonsDataGridView";
-            this.tblPersonsDataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tblPersonsDataGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.tblPersonsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblPersonsDataGridView.Size = new System.Drawing.Size(752, 220);
-            this.tblPersonsDataGridView.TabIndex = 2;
-            this.tblPersonsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblPersonsDataGridView_CellContentClick);
-            this.tblPersonsDataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblPersonsDataGridView_RowValidated);
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.tblProjectSpendigsDataGridView.DataSource = this.tblProjectSpendigsBindingSource;
+            this.tblProjectSpendigsDataGridView.Location = new System.Drawing.Point(162, 191);
+            this.tblProjectSpendigsDataGridView.Name = "tblProjectSpendigsDataGridView";
+            this.tblProjectSpendigsDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.tblProjectSpendigsDataGridView.TabIndex = 5;
+            this.tblProjectSpendigsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblProjectSpendigsDataGridView_CellContentClick);
+            this.tblProjectSpendigsDataGridView.RowValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblProjectSpendigsDataGridView_RowValidated);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(487, 149);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 11;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
+            // 
+            // lblCurrentProject
+            // 
+            this.lblCurrentProject.AutoSize = true;
+            this.lblCurrentProject.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
+            this.lblCurrentProject.Location = new System.Drawing.Point(460, 98);
+            this.lblCurrentProject.Name = "lblCurrentProject";
+            this.lblCurrentProject.Size = new System.Drawing.Size(52, 19);
+            this.lblCurrentProject.TabIndex = 10;
+            this.lblCurrentProject.Text = "label2";
+            // 
+            // vCostTypesBindingSource
+            // 
+            this.vCostTypesBindingSource.DataMember = "vCostTypes";
+            this.vCostTypesBindingSource.DataSource = this.beaDBDataSet;
+            // 
+            // vCostTypesTableAdapter
+            // 
+            this.vCostTypesTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "personID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "personID";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "projSpendingID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "projSpendingID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "personSurname";
-            this.dataGridViewTextBoxColumn3.HeaderText = "personSurname";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "personFirstName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "personFirstName";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "projectID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "projectID";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // personActive
+            // colCalendar
             // 
-            this.personActive.DataPropertyName = "personActive";
-            this.personActive.HeaderText = "personActive";
-            this.personActive.Name = "personActive";
+            this.colCalendar.HeaderText = "colCalendar";
+            this.colCalendar.Image = global::BEAProjectManagement.Properties.Resources.calendar;
+            this.colCalendar.Name = "colCalendar";
             // 
-            // currentMonthCost
+            // dataGridViewTextBoxColumn6
             // 
-            this.currentMonthCost.DataPropertyName = "currentMonthCost";
-            this.currentMonthCost.HeaderText = "currentMonthCost";
-            this.currentMonthCost.Name = "currentMonthCost";
-            // 
-            // currentWeekCost
-            // 
-            this.currentWeekCost.DataPropertyName = "currentWeekCost";
-            this.currentWeekCost.HeaderText = "currentWeekCost";
-            this.currentWeekCost.Name = "currentWeekCost";
-            // 
-            // currentDayCost
-            // 
-            this.currentDayCost.DataPropertyName = "currentDayCost";
-            this.currentDayCost.HeaderText = "currentDayCost";
-            this.currentDayCost.Name = "currentDayCost";
-            // 
-            // currentHourCost
-            // 
-            this.currentHourCost.DataPropertyName = "currentHourCost";
-            this.currentHourCost.HeaderText = "currentHourCost";
-            this.currentHourCost.Name = "currentHourCost";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "projSpendingDate";
+            this.dataGridViewTextBoxColumn6.HeaderText = "projSpendingDate";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "deptID";
-            this.dataGridViewTextBoxColumn4.HeaderText = "deptID";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "costtypeID";
+            this.dataGridViewTextBoxColumn4.DataSource = this.vCostTypesBindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "costtypeName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "costtypeID";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "costtypeID";
             // 
-            // Availability
+            // dataGridViewTextBoxColumn3
             // 
-            this.Availability.HeaderText = "Availability";
-            this.Availability.Image = global::BEAProjectManagement.Properties.Resources.availability;
-            this.Availability.Name = "Availability";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "projectActivityID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "projectActivityID";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // Cost
+            // dataGridViewTextBoxColumn5
             // 
-            this.Cost.HeaderText = "Cost";
-            this.Cost.Image = global::BEAProjectManagement.Properties.Resources.cost;
-            this.Cost.Name = "Cost";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "projSpendingAmount";
+            this.dataGridViewTextBoxColumn5.HeaderText = "projSpendingAmount";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // timeSheet
+            // dataGridViewTextBoxColumn7
             // 
-            this.timeSheet.HeaderText = "Column1";
-            this.timeSheet.Image = global::BEAProjectManagement.Properties.Resources.tag_blue;
-            this.timeSheet.Name = "timeSheet";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "projSpendingDescription";
+            this.dataGridViewTextBoxColumn7.HeaderText = "projSpendingDescription";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
-            // TimeSheet2
+            // dataGridViewTextBoxColumn8
             // 
-            this.TimeSheet2.HeaderText = "TimeSheet2";
-            this.TimeSheet2.Image = global::BEAProjectManagement.Properties.Resources.tag_blue;
-            this.TimeSheet2.Name = "TimeSheet2";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "projSpendingInvoice";
+            this.dataGridViewTextBoxColumn8.HeaderText = "projSpendingInvoice";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // frmPersons
+            // frmProjectExpences
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1008, 573);
-            this.Controls.Add(this.tblPersonsDataGridView);
-            this.Controls.Add(this.tblPersonsBindingNavigator);
-            this.Name = "frmPersons";
-            this.Load += new System.EventHandler(this.frmPersons_Load);
-            this.Controls.SetChildIndex(this.tblPersonsBindingNavigator, 0);
-            this.Controls.SetChildIndex(this.tblPersonsDataGridView, 0);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.lblCurrentProject);
+            this.Controls.Add(this.tblProjectSpendigsDataGridView);
+            this.Controls.Add(this.tblProjectSpendigsBindingNavigator);
+            this.Name = "frmProjectExpences";
+            this.Load += new System.EventHandler(this.frmProjectExpences_Load);
+            this.Controls.SetChildIndex(this.tblProjectSpendigsBindingNavigator, 0);
+            this.Controls.SetChildIndex(this.tblProjectSpendigsDataGridView, 0);
+            this.Controls.SetChildIndex(this.lblCurrentProject, 0);
+            this.Controls.SetChildIndex(this.monthCalendar1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.beaDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsBindingNavigator)).EndInit();
-            this.tblPersonsBindingNavigator.ResumeLayout(false);
-            this.tblPersonsBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tblPersonsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsBindingNavigator)).EndInit();
+            this.tblProjectSpendigsBindingNavigator.ResumeLayout(false);
+            this.tblProjectSpendigsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblProjectSpendigsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vCostTypesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -369,10 +372,10 @@
         #endregion
 
         private beaDBDataSet beaDBDataSet;
-        private System.Windows.Forms.BindingSource tblPersonsBindingSource;
-        private beaDBDataSetTableAdapters.tblPersonsTableAdapter tblPersonsTableAdapter;
+        private System.Windows.Forms.BindingSource tblProjectSpendigsBindingSource;
+        private beaDBDataSetTableAdapters.tblProjectSpendigsTableAdapter tblProjectSpendigsTableAdapter;
         private beaDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator tblPersonsBindingNavigator;
+        private System.Windows.Forms.BindingNavigator tblProjectSpendigsBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -384,20 +387,20 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tblPersonsBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView tblPersonsDataGridView;
+        private System.Windows.Forms.ToolStripButton tblProjectSpendigsBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView tblProjectSpendigsDataGridView;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.Label lblCurrentProject;
+        private System.Windows.Forms.BindingSource vCostTypesBindingSource;
+        private beaDBDataSetTableAdapters.vCostTypesTableAdapter vCostTypesTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn personActive;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currentMonthCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currentWeekCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currentDayCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn currentHourCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn Availability;
-        private System.Windows.Forms.DataGridViewImageColumn Cost;
-        private System.Windows.Forms.DataGridViewImageColumn timeSheet;
-        private System.Windows.Forms.DataGridViewImageColumn TimeSheet2;
+        private System.Windows.Forms.DataGridViewImageColumn colCalendar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

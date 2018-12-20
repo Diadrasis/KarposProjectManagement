@@ -12,6 +12,7 @@ namespace BEAProjectManagement
 {
     public partial class frmChooseProject : Form
     {
+        public string openForm;
         public frmChooseProject()
         {
             InitializeComponent();
@@ -28,11 +29,26 @@ namespace BEAProjectManagement
         {
             if (this.comboBox1.SelectedValue != System.DBNull.Value)
             {
-                //rptProjectChart frm = new rptProjectChart();
-                rptProjectReview frm = new rptProjectReview();
-                frm.projectID = (int)this.comboBox1.SelectedValue;
-                frm.Show();
-                //this.Close();
+
+                if (openForm == "projectPayments")
+                {
+                    frmProjectPayments frm = new frmProjectPayments();
+                    frm.projectID= (int)this.comboBox1.SelectedValue;
+                    frm.Show();
+                }
+                else if (openForm == "projectExpenses")
+                {
+                    frmProjectExpences frm = new frmProjectExpences();
+                    frm.projectID = (int)this.comboBox1.SelectedValue;
+                    frm.Show();
+                }
+                else
+                {
+                    rptProjectReview frm = new rptProjectReview();
+                    frm.projectID = (int)this.comboBox1.SelectedValue;
+                    frm.Show();
+                    //this.Close();
+                }
             }
         }
 
